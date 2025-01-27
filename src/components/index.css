@@ -13,3 +13,17 @@
     padding: 10px 0; /* Adjust padding for mobile */
   }
 }
+
+.inner-shadow {
+  box-shadow: inset 6px 6px 24px 0px #9747ffb2;
+}
+
+.currency input:checked + label {
+	border-width:2;
+	box-shadow: inset 12px 1px 24px 8px #9747ffb2;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
