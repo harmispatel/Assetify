@@ -124,7 +124,7 @@ const home = () => {
               </button>
 
               <h3 className="text-[30px] lg:text-[46px] font-extrabold text-white leading-tight">
-                What We're hello:
+                What We're Building:
               </h3>
 
               <p className="text-[16px] text-white">
