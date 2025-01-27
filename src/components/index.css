@@ -1,0 +1,15 @@
+@media (max-width: 768px) {
+  .menu {
+    display: none; /* Hide menu by default on smaller screens */
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .menu-icon {
+    display: flex; /* Show hamburger icon */
+    flex-direction: column;
+  }
+
+  .menu li {
+    padding: 10px 0; /* Adjust padding for mobile */
+  }
+}
