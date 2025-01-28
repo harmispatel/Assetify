@@ -596,7 +596,7 @@ const home = () => {
       </div>
 
       {/* Our Media Partners Section */}
-      <div className="bg-[#12032C]">
+      {/* <div className="bg-[#12032C]">
         <div className="bg-[url('/src/assets/media-partner-dots.png')] bg-no-repeat bg-cover bg-center">
           <div className="bg-[url('/src/assets/media-partner-bg.png')] bg-no-repeat bg-cover bg-center lg:py-12 py-6 font-montserrat">
             <div className="container mx-auto lg:px-20 px-4">
@@ -617,7 +617,7 @@ const home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Key Features Section */}
       <div className="bg-custom-image bg-no-repeat bg-cover bg-center lg:py-12 py-6 font-montserrat">
