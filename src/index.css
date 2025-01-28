@@ -4,4 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.swiper-slide {
+  width: auto;
+  height: auto;
+}
 
+@media (hover: hover) and (pointer: fine) {
+  .group:hover img:last-child {
+    opacity: 1;
+  }
+}

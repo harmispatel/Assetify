@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./index.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 import Logo from "../assets/logo.svg";
 import copyIcon from "../assets/image 15.png";
 import solidProof from "../assets/solidProof1.png";
@@ -23,8 +26,14 @@ import roadMapLine from "../assets/Roadmap-Line.svg";
 import leftArrow from "../assets/left-arrow.svg";
 import rightArrow from "../assets/right-arrow.svg";
 import astView from "../assets/AST.gif";
-import mediaPartner from "../assets/media-partner-bg.png";
-import englishLang from "../assets/English.png";
+import analytics from "../assets/CryptoSider/analytics.png";
+import blockChain from "../assets/CryptoSider/blockChain.png";
+import blockOnomi from "../assets/CryptoSider/BlockOnomi.png";
+import coinPedia from "../assets/CryptoSider/CoinPedia.png";
+import cryptoDaily from "../assets/CryptoSider/cryptoDaily.png";
+import finBold from "../assets/CryptoSider/finBold.png";
+import newsBtc from "../assets/CryptoSider/newsBtc.png";
+import theNewsCrypto from "../assets/CryptoSider/theNewsCrypto.png";
 import { Link } from "react-router";
 import {
   Linkedin,
@@ -98,6 +107,70 @@ const home = () => {
     { code: "es", name: "Español", flag: "https://flagcdn.com/w40/es.png" },
     { code: "fr", name: "Français", flag: "https://flagcdn.com/w40/fr.png" },
   ];
+
+  const mediaPartners = [
+    {
+      image: analytics,
+    },
+    {
+      image: blockChain,
+    },
+    {
+      image: blockOnomi,
+    },
+    {
+      image: coinPedia,
+    },
+    {
+      image: cryptoDaily,
+    },
+    {
+      image: finBold,
+    },
+    {
+      image: newsBtc,
+    },
+    {
+      image: theNewsCrypto,
+    },
+  ];
+
+  const [gap, setGap] = useState(1);
+
+  useEffect(() => {
+    const updateGap = () => {
+      const isDesktop = window.innerWidth > 767.9;
+      setGap(isDesktop ? 0.0285 * window.innerWidth : 15);
+    };
+
+    updateGap();
+    window.addEventListener("resize", updateGap);
+    return () => window.removeEventListener("resize", updateGap);
+  }, []);
+
+  const swiperProps = {
+    loop: true,
+    slidesPerView: 4,
+    spaceBetween: gap,
+    speed: 4000,
+    allowTouchMove: false,
+    modules: [Autoplay],
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+      },
+      767: {
+        slidesPerView: 3,
+      },
+      0: {
+        slidesPerView: 2,
+      },
+    },
+  };
 
   useEffect(() => {
     if (isOpen && dropdownButtonRef.current) {
@@ -490,7 +563,7 @@ const home = () => {
       </div>
 
       {/* Smart Wallet Section */}
-      <div className="bg-[#12032c] lg:py-12 py-6 font-montserrat">
+      <div className="bg-[#12032c] lg:pt-12 pt-6 font-montserrat">
         <div className="container mx-auto lg:px-8 px-4">
           <div className="relative border border-[#8260b9] rounded-[22px] lg:p-10 p-4 bg-[url('/src/assets/outline.png')] bg-cover bg-no-repeat before:absolute before:inset-0 before:bg-[#12032c] before:opacity-80 before:rounded-[22px]">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-10 items-center">
@@ -596,34 +669,53 @@ const home = () => {
       </div>
 
       {/* Our Media Partners Section */}
-      {/* <div className="bg-[#12032C]">
+      <div className="bg-[#12032C]">
         <div className="bg-[url('/src/assets/media-partner-dots.png')] bg-no-repeat bg-cover bg-center">
-          <div className="bg-[url('/src/assets/media-partner-bg.png')] bg-no-repeat bg-cover bg-center lg:py-12 py-6 font-montserrat">
-            <div className="container mx-auto lg:px-20 px-4">
-              <button className="self-center px-5 py-2 rounded-lg text-[14px] text-sm text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors bg-custom-gradient shadow-custom-inset">
-                Our Services
+          <div className="bg-[url('/src/assets/media-partner-bg.png')] bg-no-repeat bg-cover bg-center lg:py-20 py-6 font-montserrat">
+            <div className="container mx-auto lg:px-20 px-4 flex flex-col justify-center items-center">
+              <button className="px-8 py-3 rounded-lg font-semibold text-sm text-white bg-[#301881] border border-[#8260b9] inner-shadow">
+                <span className="bg-gradient-to-r from-[#FFFFFF] to-[#E077FF] bg-clip-text text-transparent">
+                  Partners
+                </span>
               </button>
-              <div className="flex justify-between items-center my-5">
-                <h3 className="text-white font-extrabold lg:text-[46px] text-[28px] leading-[55px]">
-                  Key Features
-                </h3>
-
-                <div>
-                  <button className="self-start px-5 py-2 rounded-lg text-[14px] text-sm text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors bg-custom-gradient shadow-custom-inset">
-                    Buy Now
-                  </button>
+              <h3 className="text-white font-extrabold lg:text-[46px] text-[28px] leading-[55px] text-center my-10">
+                Our Media Partners
+              </h3>
+              <div className="container mx-auto px-4">
+                <div className="overflow-hidden">
+                  <div className="mb-8">
+                    <Swiper {...swiperProps}>
+                      {[...mediaPartners, ...mediaPartners].map(
+                        (brand, index) => (
+                          <SwiperSlide
+                            key={`rtl-${index}`}
+                            className="relative items-center"
+                          >
+                            <div className="relative group">
+                              <img
+                                src={brand.image}
+                                className="transition-opacity duration-600 w-[250px]"
+                              />
+                            </div>
+                          </SwiperSlide>
+                        )
+                      )}
+                    </Swiper>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* Key Features Section */}
       <div className="bg-custom-image bg-no-repeat bg-cover bg-center lg:py-12 py-6 font-montserrat">
         <div className="container mx-auto lg:px-20 px-4">
-          <button className="self-start px-5 py-2 rounded-lg text-[14px] text-sm text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors bg-custom-gradient shadow-custom-inset">
-            Our Services
+          <button className="self-start px-8 py-3 rounded-lg font-semibold text-sm text-white bg-[#301881] border border-[#8260b9] inner-shadow">
+            <span className="bg-gradient-to-r from-[#FFFFFF] to-[#E077FF] bg-clip-text text-transparent">
+              Our Services
+            </span>
           </button>
           <div className="flex justify-between items-center my-5">
             <h3 className="text-white font-extrabold lg:text-[46px] text-[28px] leading-[55px]">
@@ -631,8 +723,10 @@ const home = () => {
             </h3>
 
             <div>
-              <button className="self-start px-5 py-2 rounded-lg text-[14px] text-sm text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors bg-custom-gradient shadow-custom-inset">
-                Buy Now
+              <button className="self-start px-8 py-3 rounded-lg font-semibold text-sm text-white bg-[#301881] border border-[#8260b9] inner-shadow">
+                <span className="bg-gradient-to-r from-[#FFFFFF] to-[#E077FF] bg-clip-text text-transparent">
+                  Buy Now
+                </span>
               </button>
             </div>
           </div>
