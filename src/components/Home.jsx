@@ -60,6 +60,8 @@ import {
   Plus,
   Check,
   ChevronDown,
+  Menu,
+  X,
 } from "lucide-react";
 
 const home = () => {
@@ -69,6 +71,33 @@ const home = () => {
     { id: "radio_3", label: "ETH", imageSrc: eth },
     { id: "radio_4", label: "USDT", imageSrc: usdt },
     { id: "radio_5", label: "OTHER", imageSrc: other },
+  ];
+
+  const aiDrivenData = [
+    {
+      title: "Real-World Asset Tokenization",
+      description:
+        "Trading of fractional shares of assets like real estate and commodities etc. to unlock global opportunities",
+      image: aiImage1,
+    },
+    {
+      title: "Smarter Investments",
+      description:
+        "To maximize returns, our AI provides personalized recommendations, predictive analytics and risk assessments.",
+      image: aiImage2,
+    },
+    {
+      title: "Passive Income Opportunities",
+      description:
+        "Earn through AI-optimized staking, yield farming, and liquidity management.",
+      image: aiImage3,
+    },
+    {
+      title: "Transparency and Trust",
+      description:
+        "Our platform is built on blockchain to provide a secure, transparent and auditable transaction process.",
+      image: aiImage4,
+    },
   ];
 
   const steps = [
@@ -305,14 +334,22 @@ const home = () => {
 
   const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
   const [openIndex, setOpenIndex] = useState(0);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   function FAQItem({ question, answer, isOpen, onClick }) {
     return (
       <div className="mb-4">
         <div
-          className={`rounded-lg border border-[#8260B9] transition-all duration-300 ${
-            isOpen ? "bg-[rgba(130,96,185,0.1)]" : ""
-          }`}
+          style={{
+            background: isOpen
+              ? "linear-gradient(180deg, #12032C 0%, #9747FF 253.6%)"
+              : "",
+          }}
+          className="rounded-lg border border-[#8260B9] transition-all duration-300"
         >
           <button
             onClick={onClick}
@@ -345,7 +382,7 @@ const home = () => {
     <>
       {/* Header Section */}
       <section className="bg-[#6e45e9] text-white text-center py-3 font-montserrat">
-        <div className="container mx-auto flex justify-center items-center space-x-4">
+        <div className="container mx-auto flex flex-wrap justify-center items-center space-x-4">
           <p className="text-[14px] font-light tracking-[1px]">
             Use Special Key:
           </p>
@@ -366,50 +403,143 @@ const home = () => {
           </span>
         </div>
       </section>
-      <header>
-        <nav className="text-white bg-[#12032c] font-montserrat w-full z-20 top-0 left-0">
-          <ul className="navigation max-w-[93vw] flex flex-wrap justify-between items-center relative mx-auto py-5">
-            <Link to="/" className="logo" href="#">
+
+      <nav className="text-white bg-[#12032c] font-montserrat w-full z-20 top-0 left-0 relative">
+        <div className="max-w-[93vw] mx-auto py-5">
+          <div className="flex justify-between items-center">
+            <Link to="/" className="logo flex items-center gap-2">
               <img src={Logo} alt="" className="w-[134px] h-[34px]" />
             </Link>
-            <span className="menu flex items-center [&>li]:pl-8 [&>li>a]:text-center [&>li>a]:relative [&>li>a]:transition [&>li>a]:duration-200 [&>li>a]:ease-in-out font-normal  text-lg">
-              <li>
-                <Link href="#">About us</Link>
-              </li>
-              <li>
-                <Link href="#">Why Us</Link>
-              </li>
-              <li>
-                <Link href="#">Roadmap</Link>
-              </li>
-              <li>
-                <Link href="#">Resources</Link>
-              </li>
-              <li>
-                <Link href="#">Token Allocation</Link>
-              </li>
-              <li>
-                <Link href="#">Audits</Link>
-              </li>
-              <li>
-                <Link href="#">FAQs</Link>
-              </li>
 
-              <li>
-                <button
-                  className="self-start px-5 py-2 rounded-xl text-[16px]  text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors"
-                  style={{
-                    background: "linear-gradient(300deg, #200F56, #9747FF)",
-                    boxShadow: "6px 6px 24px 0px #9747FFB2 inset",
-                  }}
-                >
-                  Connect Wallet
-                </button>
-              </li>
-            </span>
-          </ul>
-        </nav>
-      </header>
+            {/* Mobile menu button */}
+            <button
+              onClick={toggleMenu}
+              className="lg:hidden text-white hover:text-gray-300"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+
+            {/* Desktop Menu */}
+            <div className="hidden lg:flex items-center space-x-8">
+              <Link
+                to="#"
+                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200"
+              >
+                About us
+              </Link>
+              <Link
+                to="#"
+                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200"
+              >
+                Why Us
+              </Link>
+              <Link
+                to="#"
+                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200"
+              >
+                Roadmap
+              </Link>
+              <Link
+                to="#"
+                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200"
+              >
+                Resources
+              </Link>
+              <Link
+                to="#"
+                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200"
+              >
+                Token Allocation
+              </Link>
+              <Link
+                to="#"
+                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200"
+              >
+                Audits
+              </Link>
+              <Link
+                to="#"
+                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200"
+              >
+                FAQs
+              </Link>
+              <button
+                className="px-5 py-2 rounded-xl text-[16px] text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors"
+                style={{
+                  background: "linear-gradient(300deg, #200F56, #9747FF)",
+                  boxShadow: "6px 6px 24px 0px #9747FFB2 inset",
+                }}
+              >
+                Connect Wallet
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile Menu */}
+          <div
+            className={`lg:hidden ${
+              isMenuOpen
+                ? "block absolute top-[74px] left-0 bg-[#12032c] w-full p-[10px]"
+                : "hidden"
+            }`}
+          >
+            <div className="flex flex-col space-y-4 pt-4 pb-3">
+              <Link
+                to="#"
+                className="hover:text-gray-300 transition duration-200 py-2"
+              >
+                About us
+              </Link>
+              <Link
+                to="#"
+                className="hover:text-gray-300 transition duration-200 py-2"
+              >
+                Why Us
+              </Link>
+              <Link
+                to="#"
+                className="hover:text-gray-300 transition duration-200 py-2"
+              >
+                Roadmap
+              </Link>
+              <Link
+                to="#"
+                className="hover:text-gray-300 transition duration-200 py-2"
+              >
+                Resources
+              </Link>
+              <Link
+                to="#"
+                className="hover:text-gray-300 transition duration-200 py-2"
+              >
+                Token Allocation
+              </Link>
+              <Link
+                to="#"
+                className="hover:text-gray-300 transition duration-200 py-2"
+              >
+                Audits
+              </Link>
+              <Link
+                to="#"
+                className="hover:text-gray-300 transition duration-200 py-2"
+              >
+                FAQs
+              </Link>
+              <button
+                className="px-5 py-2 rounded-xl text-[16px] text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors w-full"
+                style={{
+                  background: "linear-gradient(300deg, #200F56, #9747FF)",
+                  boxShadow: "6px 6px 24px 0px #9747FFB2 inset",
+                }}
+              >
+                Connect Wallet
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
 
       {/* AI-Powered DeFi Section */}
       <div className="bg-[#12032c] lg:py-12 py-6 font-montserrat bg-[url('/src/assets/hero-bg.png')] bg-cover bg-center">
@@ -679,38 +809,12 @@ const home = () => {
                   ))}
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {[
-                    {
-                      title: "Real-World Asset Tokenization",
-                      description:
-                        "Trading of fractional shares of assets like real estate and commodities etc. to unlock global opportunities",
-                      image: aiImage1,
-                    },
-                    {
-                      title: "Smarter Investments",
-                      description:
-                        "To maximize returns, our AI provides personalized recommendations, predictive analytics and risk assessments.",
-                      image: aiImage2,
-                    },
-                    {
-                      title: "Passive Income Opportunities",
-                      description:
-                        "Earn through AI-optimized staking, yield farming, and liquidity management.",
-                      image: aiImage3,
-                    },
-                    {
-                      title: "Transparency and Trust",
-                      description:
-                        "Our platform is built on blockchain to provide a secure, transparent and auditable transaction process.",
-                      image: aiImage4,
-                    },
-                  ].map((item, index) => (
+                <div className="lg:grid md:grid grid-cols-1 md:grid-cols-2 gap-4 hidden">
+                  {aiDrivenData.map((item, index) => (
                     <div
                       key={index}
                       className="border border-[#8260b9] rounded-xl lg:p-6 p-4 bg-[#13042c] h-full flex flex-col gap-4"
                     >
-                      {/* <AlphaIcon className="w-10 h-10 text-white" /> */}
                       <img
                         src={item?.image}
                         alt="Smart Wallet Demo"
@@ -725,6 +829,55 @@ const home = () => {
                       </span>
                     </div>
                   ))}
+                </div>
+
+                <div className="lg:hidden md:hidden">
+                  <Swiper
+                    modules={[
+                      Navigation,
+                      Pagination,
+                      Scrollbar,
+                      A11y,
+                      Autoplay,
+                    ]}
+                    breakpoints={{
+                      0: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                      },
+                    }}
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    onSwiper={(swiper) => (roadMapSec.current = swiper)}
+                    loop={true}
+                    autoplay={{
+                      delay: 4000,
+                      disableOnInteraction: false,
+                    }}
+                  >
+                    {aiDrivenData.map((item, index) => (
+                      <SwiperSlide key={index} className="road-map-slider">
+                        <div
+                          key={index}
+                          className="border border-[#8260b9] rounded-xl lg:p-6 p-4 bg-[#13042c] h-full flex flex-col gap-4"
+                        >
+                          {/* <AlphaIcon className="w-10 h-10 text-white" /> */}
+                          <img
+                            src={item?.image}
+                            alt="Smart Wallet Demo"
+                            className="w-10 h-10"
+                          />
+
+                          <h4 className="text-[22px] text-white font-semibold leading-[26 px]">
+                            {item.title}
+                          </h4>
+                          <span className="text-[16px] text-white font-normal leading-[24px]">
+                            {item.description}
+                          </span>
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
                 </div>
               </div>
 
@@ -1014,7 +1167,7 @@ const home = () => {
                   onSwiper={(swiper) => (roadMapSec.current = swiper)}
                   loop={true}
                   autoplay={{
-                    delay: 400000000,
+                    delay: 4000,
                     disableOnInteraction: false,
                   }}
                 >
