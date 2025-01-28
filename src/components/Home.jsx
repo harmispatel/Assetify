@@ -583,7 +583,7 @@ const home = () => {
                 What We're Building:
               </h3>
 
-              <p className="lg:text-[16px] text-[14px] text-white font-normal lg:leading-[19.5px] leading-[17.07px]">
+              <p className="lg:text-[16px] text-[14px] text-white font-normal lg:leading-[19.5px] leading-[17.07px] tracking-[0.9px]">
                 Assetify Is A New Generation Decentralized Finance (DeFi)
                 Platform That Combines The Power Of Blockchain And Artificial
                 Intelligence (AI). On Our Platform, We Tokenize Real-World
@@ -617,7 +617,7 @@ const home = () => {
                 ))}
               </div>
 
-              <p className="lg:text-[16px] text-[14px] text-white font-normal lg:leading-[19.5px] leading-[17.07px]">
+              <p className="lg:text-[16px] text-[14px] text-white font-normal lg:leading-[19.5px] leading-[17.07px] tracking-[0.9px]">
                 We are launching a Smart Wallet powered by AI to offer the
                 highest level of security, efficiency, and user friendly
                 features. Our mission is to make decentralized finance
