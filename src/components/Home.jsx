@@ -43,26 +43,9 @@ import cryptoDaily from "../assets/CryptoSider/cryptoDaily.png";
 import finBold from "../assets/CryptoSider/finBold.png";
 import newsBtc from "../assets/CryptoSider/newsBtc.png";
 import theNewsCrypto from "../assets/CryptoSider/theNewsCrypto.png";
-import { Link } from "react-router";
-import {
-  Linkedin,
-  Twitter,
-  MessageCircle,
-  Send,
-  FileText,
-  Shield,
-  FileSignature,
-  Lock,
-  Coins,
-  Globe,
-  Copy,
-  Minus,
-  Plus,
-  Check,
-  ChevronDown,
-  Menu,
-  X,
-} from "lucide-react";
+import { Minus, Plus, X } from "lucide-react";
+import Footer from "./Common/Footer";
+import Navbar from "./Common/Navbar";
 
 const home = () => {
   const radioItems = [
@@ -245,17 +228,7 @@ const home = () => {
   ];
 
   const roadMapSec = useRef(null);
-
-  const [isOpen, setIsOpen] = useState(false);
-  const [isTop, setIsTop] = useState(false);
-  const dropdownButtonRef = useRef(null);
   const [selectedRadio, setSelectedRadio] = useState("radio_1");
-
-  const languages = [
-    { code: "en", name: "English", flag: "https://flagcdn.com/w40/us.png" },
-    { code: "es", name: "Español", flag: "https://flagcdn.com/w40/es.png" },
-    { code: "fr", name: "Français", flag: "https://flagcdn.com/w40/fr.png" },
-  ];
 
   const mediaPartners = [
     {
@@ -321,24 +294,7 @@ const home = () => {
     },
   };
 
-  useEffect(() => {
-    if (isOpen && dropdownButtonRef.current) {
-      const rect = dropdownButtonRef.current.getBoundingClientRect();
-      const spaceBelow = window.innerHeight - rect.bottom;
-      const spaceAbove = rect.top;
-
-      // Check if there's enough space to open the dropdown upwards
-      setIsTop(spaceAbove > spaceBelow);
-    }
-  }, [isOpen]);
-
-  const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
   const [openIndex, setOpenIndex] = useState(0);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   function FAQItem({ question, answer, isOpen, onClick }) {
     return (
@@ -381,165 +337,7 @@ const home = () => {
   return (
     <>
       {/* Header Section */}
-      <section className="bg-[#6e45e9] text-white text-center py-3 font-montserrat">
-        <div className="container mx-auto flex flex-wrap justify-center items-center space-x-4">
-          <p className="text-[14px] font-light tracking-[1px]">
-            Use Special Key:
-          </p>
-          <h5 className="text-[14px] font-extrabold tracking-[1px]">
-            QWH6329JG
-          </h5>
-          <button
-            onClick={() => {
-              navigator.clipboard.writeText("QWH6329JG");
-              alert("Copied to clipboard!");
-            }}
-            className="flex items-center justify-center rounded "
-          >
-            <Copy className="w-4 h-4" />
-          </button>
-          <span className="text-[14px] font-normal tracking-[1px]">
-            to receive 300% Bonus!
-          </span>
-        </div>
-      </section>
-
-      <nav className="text-white bg-[#12032c] font-montserrat w-full z-20 top-0 left-0 relative">
-        <div className="max-w-[93vw] mx-auto py-5">
-          <div className="flex justify-between items-center">
-            <Link to="/" className="logo flex items-center gap-2">
-              <img src={Logo} alt="" className="w-[134px] h-[34px]" />
-            </Link>
-
-            {/* Mobile menu button */}
-            <button
-              onClick={toggleMenu}
-              className="lg:hidden text-white hover:text-gray-300"
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-
-            {/* Desktop Menu */}
-            <div className="hidden lg:flex items-center space-x-8">
-              <Link
-                to="#"
-                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200"
-              >
-                About us
-              </Link>
-              <Link
-                to="#"
-                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200"
-              >
-                Why Us
-              </Link>
-              <Link
-                to="#"
-                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200"
-              >
-                Roadmap
-              </Link>
-              <Link
-                to="#"
-                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200"
-              >
-                Resources
-              </Link>
-              <Link
-                to="#"
-                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200"
-              >
-                Token Allocation
-              </Link>
-              <Link
-                to="#"
-                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200"
-              >
-                Audits
-              </Link>
-              <Link
-                to="#"
-                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200"
-              >
-                FAQs
-              </Link>
-              <button
-                className="px-5 py-2 rounded-xl text-[16px] text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors"
-                style={{
-                  background: "linear-gradient(300deg, #200F56, #9747FF)",
-                  boxShadow: "6px 6px 24px 0px #9747FFB2 inset",
-                }}
-              >
-                Connect Wallet
-              </button>
-            </div>
-          </div>
-
-          {/* Mobile Menu */}
-          <div
-            className={`lg:hidden ${
-              isMenuOpen
-                ? "block absolute top-[74px] left-0 bg-[#12032c] w-full p-[10px]"
-                : "hidden"
-            }`}
-          >
-            <div className="flex flex-col space-y-4 pt-4 pb-3">
-              <Link
-                to="#"
-                className="hover:text-gray-300 font-medium transition duration-200 py-2"
-              >
-                About us
-              </Link>
-              <Link
-                to="#"
-                className="hover:text-gray-300 font-medium transition duration-200 py-2"
-              >
-                Why Us
-              </Link>
-              <Link
-                to="#"
-                className="hover:text-gray-300 font-medium transition duration-200 py-2"
-              >
-                Roadmap
-              </Link>
-              <Link
-                to="#"
-                className="hover:text-gray-300 font-medium transition duration-200 py-2"
-              >
-                Resources
-              </Link>
-              <Link
-                to="#"
-                className="hover:text-gray-300 font-medium transition duration-200 py-2"
-              >
-                Token Allocation
-              </Link>
-              <Link
-                to="#"
-                className="hover:text-gray-300 font-medium transition duration-200 py-2"
-              >
-                Audits
-              </Link>
-              <Link
-                to="#"
-                className="hover:text-gray-300 font-medium transition duration-200 py-2"
-              >
-                FAQs
-              </Link>
-              <button
-                className="px-5 py-2 rounded-xl text-[16px] text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors w-full"
-                style={{
-                  background: "linear-gradient(300deg, #200F56, #9747FF)",
-                  boxShadow: "6px 6px 24px 0px #9747FFB2 inset",
-                }}
-              >
-                Connect Wallet
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* AI-Powered DeFi Section */}
       <div className="bg-[#12032c] lg:py-12 py-6 font-montserrat bg-[url('/src/assets/hero-bg.png')] bg-cover bg-center">
@@ -1443,128 +1241,7 @@ const home = () => {
       </div>
 
       {/* Footer Section */}
-      <footer className="bg-[#12032c] lg:py-10 py-6 font-montserrat text-white">
-        <div className="container mx-auto lg:px-12 px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Left Section */}
-          <div className="flex flex-col items-start">
-            <Link to="/" className="logo" href="#">
-              <img src={Logo} alt="" className="w-[134px] h-[34px]" />
-            </Link>
-            <p className="my-8 text-[16px]">
-              Investments in digital assets carry risk. Please consult a
-              financial advisor before investing.
-            </p>
-            <p className="text-[16px] mb-8">
-              Copyright © 2025 Assetify.ai All Rights Reserved
-            </p>
-
-            <div className="relative inline-block text-left">
-              <button
-                ref={dropdownButtonRef}
-                type="button"
-                className="inline-flex items-center justify-between w-35 px-4 py-2.5 text-sm font-medium text-white border border-[#FFFFFF] rounded-lg focus:outline-none"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                <div className="flex items-center">
-                  <img
-                    src={selectedLanguage.flag}
-                    alt={`${selectedLanguage.name} flag`}
-                    className="w-5 h-4 object-cover mr-2"
-                  />
-                  <span>{selectedLanguage.name}</span>
-                </div>
-                <ChevronDown
-                  className={`w-4 h-4 ml-2 transition-transform duration-200 ${
-                    isOpen ? "transform rotate-180" : ""
-                  }`}
-                />
-              </button>
-
-              {isOpen && (
-                <div
-                  className={`absolute right-0 mt-2 w-35 bg-[#12032c] border border-[#FFFFFF] rounded-lg  focus:outline-none z-10 ${
-                    isTop ? "bottom-full mb-2" : "top-full mt-2"
-                  }`}
-                >
-                  <div className="py-1">
-                    {languages.map((language) => (
-                      <button
-                        key={language.code}
-                        className={`${
-                          selectedLanguage.code === language.code
-                            ? "bg-gray-100 text-gray-900"
-                            : "text-white"
-                        } group flex items-center w-full px-4 py-2.5 text-sm gap-1`}
-                        onClick={() => {
-                          setSelectedLanguage(language);
-                          setIsOpen(false);
-                        }}
-                      >
-                        <img
-                          src={language.flag}
-                          alt={`${language.name} flag`}
-                          className="w-5 h-4 object-cover mr-2"
-                        />
-                        <span className="flex-grow text-left">
-                          {language.name}
-                        </span>
-                        {selectedLanguage.code === language.code && (
-                          <Check className="w-5 h5 text-indigo-600" />
-                        )}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* Middle Section */}
-          <div>
-            <h3 className="text-lg font-semibold text-purple-500 mb-4">
-              Follow Us
-            </h3>
-            <ul className="space-y-2">
-              <li className="flex items-center">
-                <Linkedin className="w-4 h-4 mr-2" /> Linkedin
-              </li>
-              <li className="flex items-center">
-                <Twitter className="w-4 h-4 mr-2" /> Twitter
-              </li>
-              <li className="flex items-center">
-                <MessageCircle className="w-4 h-4 mr-2" /> Discord
-              </li>
-              <li className="flex items-center">
-                <Send className="w-4 h-4 mr-2" /> Telegram
-              </li>
-            </ul>
-          </div>
-
-          {/* Right Section */}
-          <div>
-            <h3 className="text-lg font-semibold text-purple-500 mb-4">
-              Documentation
-            </h3>
-            <ul className="space-y-2">
-              <li className="flex items-center">
-                <FileText className="w-4 h-4 mr-2" /> Whitepaper
-              </li>
-              <li className="flex items-center">
-                <Shield className="w-4 h-4 mr-2" /> Security & Audits
-              </li>
-              <li className="flex items-center">
-                <FileSignature className="w-4 h-4 mr-2" /> Terms And Conditions
-              </li>
-              <li className="flex items-center">
-                <Lock className="w-4 h-4 mr-2" /> Privacy Policy
-              </li>
-              <li className="flex items-center">
-                <Coins className="w-4 h-4 mr-2" /> Token Balance Checker
-              </li>
-            </ul>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 };
