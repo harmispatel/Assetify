@@ -1,7 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./index.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+  EffectFade,
+} from "swiper/modules";
 import "swiper/css";
 import Logo from "../assets/logo.svg";
 import copyIcon from "../assets/image 15.png";
@@ -10,10 +17,12 @@ import Dashboard1 from "../assets/Dashboard 3D 1.png";
 import bnb1 from "../assets/BNB.png";
 import busd from "../assets/BUSD.png";
 import eth from "../assets/ETH.png";
+import usdt from "../assets/usdt.png";
+import other from "../assets/othes.png";
 import inputGroup from "../assets/inputGroup.png";
 import rightIcon from "../assets/rightIcon.svg";
 import rightGreenIcon from "../assets/rightGreen.svg";
-import mobileGif from "../assets/AI-Driven Smart Wallet.gif";
+import mobileGif from "../assets/Mobile Without White Space .gif";
 import aiImage1 from "../assets/Mask group (6).png";
 import aiImage2 from "../assets/Mask group (1).png";
 import aiImage3 from "../assets/Mask group (2).png";
@@ -21,7 +30,7 @@ import aiImage4 from "../assets/Mask group (3).png";
 import aiImage5 from "../assets/Mask group (4).png";
 import aiImage6 from "../assets/Mask group (5).png";
 import currency from "../assets/currency.png";
-import howItWork from "../assets/how-it-works.gif";
+import howItWork from "../assets/How It Works .gif";
 import roadMapLine from "../assets/Roadmap-Line.svg";
 import leftArrow from "../assets/left-arrow.svg";
 import rightArrow from "../assets/right-arrow.svg";
@@ -54,6 +63,14 @@ import {
 } from "lucide-react";
 
 const home = () => {
+  const radioItems = [
+    { id: "radio_1", label: "BNB", imageSrc: bnb1 },
+    { id: "radio_2", label: "BUSD", imageSrc: busd },
+    { id: "radio_3", label: "ETH", imageSrc: eth },
+    { id: "radio_4", label: "USDT", imageSrc: usdt },
+    { id: "radio_5", label: "OTHER", imageSrc: other },
+  ];
+
   const steps = [
     {
       step: "Step 01",
@@ -98,9 +115,112 @@ const home = () => {
     },
   ];
 
+  const RoadmapData = [
+    {
+      phase: "Phase 01",
+      title: "Foundation (Q1 2025)",
+      items: [
+        "Do a comprehensive security audit on $AST token.",
+        "Presale Launch: Make $AST tokens available to early supporters at a discount.",
+        "Release the whitepaper and tokenomics.",
+        "Build community channels and initiate airdrop campaigns.",
+      ],
+    },
+    {
+      phase: "Phase 02",
+      title: "Early Development (Q2–Q3 2025)",
+      items: [
+        "Launch cross chain enabled AI powered Smart Wallet.",
+        "Begin CEX listings and integrate fiat onramp services.",
+        "Start mobile app development, and sign up for beta testers.",
+      ],
+    },
+    {
+      phase: "Phase 03",
+      title: "Platform Rollout (Q4 2025)",
+      items: [
+        "Launch DeFi marketplace for lending and trading tokenized assets.",
+        "Deploy advanced AI tools and release the mobile app.",
+        "Execute global marketing campaigns to expand awareness.",
+      ],
+    },
+    {
+      phase: "Phase 04",
+      title: "Expansion (Q1–Q2 2026)",
+      items: [
+        "Launch staking dApps, AI-driven copytrading bots, and the Assetify Launchpad.",
+        "Conduct a third airdrop campaign to reward loyal users.",
+      ],
+    },
+    {
+      phase: "Phase 05",
+      title: "Ecosystem Growth (Q3–Q4 2026)",
+      items: [
+        "Deploy advanced analytics dashboard for real-time insights.",
+        "Establish DAO governance for community-driven decisions.",
+      ],
+    },
+    {
+      phase: "Phase 06",
+      title: "Global Expansion (2027+)",
+      items: [
+        "Secure Tier 1 CEX listings to boost liquidity and accessibility.",
+        "Launch large-scale PR campaigns and drive global adoption.",
+      ],
+    },
+  ];
+
+  const blogsData = [
+    {
+      id: 1,
+      title: "What is Bitcoin Mining",
+      description:
+        "Nemo enim ipsam voluptatem quia volup tas sit aspernatur aut odit aut fu sed quia.....",
+      image: currency,
+    },
+    {
+      id: 2,
+      title: "What is Bitcoin Mining",
+      description:
+        "Nemo enim ipsam voluptatem quia volup tas sit aspernatur aut odit aut fu sed quia.....",
+      image: currency,
+    },
+    {
+      id: 3,
+      title: "What is Bitcoin Mining",
+      description:
+        "Nemo enim ipsam voluptatem quia volup tas sit aspernatur aut odit aut fu sed quia.....",
+      image: currency,
+    },
+    {
+      id: 4,
+      title: "What is Bitcoin Mining",
+      description:
+        "Nemo enim ipsam voluptatem quia volup tas sit aspernatur aut odit aut fu sed quia.....",
+      image: currency,
+    },
+    {
+      id: 5,
+      title: "What is Bitcoin Mining",
+      description:
+        "Nemo enim ipsam voluptatem quia volup tas sit aspernatur aut odit aut fu sed quia.....",
+      image: currency,
+    },
+    {
+      id: 6,
+      title: "What is Bitcoin Mining",
+      description:
+        "Nemo enim ipsam voluptatem quia volup tas sit aspernatur aut odit aut fu sed quia.....",
+      image: currency,
+    },
+  ];
+
+  const roadMapSec = useRef(null);
+
   const [isOpen, setIsOpen] = useState(false);
   const [isTop, setIsTop] = useState(false);
   const dropdownButtonRef = useRef(null);
+  const [selectedRadio, setSelectedRadio] = useState("radio_1");
 
   const languages = [
     { code: "en", name: "English", flag: "https://flagcdn.com/w40/us.png" },
@@ -306,7 +426,7 @@ const home = () => {
                 for everyone - Powered By Assetify
               </p>
 
-              <div className="lg:flex gap-4 items-center grid">
+              <div className="lg:flex md:flex gap-4 items-center grid">
                 <button className="self-start rounded-[8px] font-semibold text-[16px] leading-[17.07px] bg-[#301881]  px-6 py-4 inner-shadow text-white">
                   Join the Revolution
                 </button>
@@ -319,11 +439,13 @@ const home = () => {
                   />
                 </button>
               </div>
-              <img
-                src={solidProof}
-                alt="What We're Building"
-                className="w-[230px] shadow-white-30 rounded-2xl"
-              />
+              <div className="flex justify-center lg:justify-start md:justify-start">
+                <img
+                  src={solidProof}
+                  alt="What We're Building"
+                  className="w-[230px] shadow-white-30 rounded-2xl"
+                />
+              </div>
             </div>
             <div className="grid place-items-end">
               <div className="border border-[#8260b9] lg:w-[500px] text-white lg:p-6 p-4 rounded-2xl">
@@ -356,88 +478,32 @@ const home = () => {
 
                 <div className="grid my-4 currency">
                   <label>Choose Cryptocurrency</label>
-                  <div class="flex w-full overflow-x-auto relative gap-3 no-scrollbar mt-3">
-                    <div>
-                      <input
-                        class="hidden"
-                        id="radio_1"
-                        type="radio"
-                        name="radio"
-                        checked
-                      />
-                      <label
-                        class="flex flex-col px-10 py-3 border-2 border-[#8260B9] cursor-pointer bg-[#13042C] rounded-xl"
-                        for="radio_1"
-                      >
-                        <span class="text-lg font-semibold uppercase flex items-center justify-center gap-3">
-                          BNB <img src={bnb1} alt="bnb-img" />
-                        </span>
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        class="hidden"
-                        id="radio_2"
-                        type="radio"
-                        name="radio"
-                      />
-                      <label
-                        class="flex flex-col px-10 py-3 border-2 border-[#8260B9] cursor-pointer bg-[#13042C] rounded-xl"
-                        for="radio_2"
-                      >
-                        <span class="text-lg font-semibold uppercase flex items-center justify-center gap-3">
-                          BUSD <img src={busd} alt="bnb-img" />
-                        </span>
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        class="hidden"
-                        id="radio_3"
-                        type="radio"
-                        name="radio"
-                      />
-                      <label
-                        class="flex flex-col px-10 py-3 border-2 border-[#8260B9] cursor-pointer bg-[#13042C] rounded-xl"
-                        for="radio_3"
-                      >
-                        <span class="text-lg font-semibold uppercase flex items-center justify-center gap-3">
-                          ETH <img src={eth} alt="bnb-img" />
-                        </span>
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        class="hidden"
-                        id="radio_3"
-                        type="radio"
-                        name="radio"
-                      />
-                      <label
-                        class="flex flex-col px-10 py-3 border-2 border-[#8260B9] cursor-pointer bg-[#13042C] rounded-xl"
-                        for="radio_3"
-                      >
-                        <span class="text-lg font-semibold uppercase flex items-center justify-center gap-3">
-                          ETH <img src={bnb1} alt="bnb-img" />
-                        </span>
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        class="hidden"
-                        id="radio_3"
-                        type="radio"
-                        name="radio"
-                      />
-                      <label
-                        class="flex flex-col px-10 py-3 border-2 border-[#8260B9] cursor-pointer bg-[#13042C] rounded-xl"
-                        for="radio_3"
-                      >
-                        <span class="text-lg font-semibold uppercase flex items-center justify-center gap-3">
-                          ETH <img src={bnb1} alt="bnb-img" />
-                        </span>
-                      </label>
-                    </div>
+                  <div className="flex w-full overflow-x-auto relative gap-3 no-scrollbar mt-3">
+                    {radioItems.map((item, index) => (
+                      <div key={item.id} className="relative">
+                        <input
+                          className="peer absolute opacity-0 w-full h-full cursor-pointer"
+                          id={item.id}
+                          type="radio"
+                          name="radio"
+                          checked={selectedRadio === item.id}
+                          onChange={() => setSelectedRadio(item.id)}
+                        />
+                        <label
+                          className="flex flex-col px-10 py-3 border border-[#8260B9] cursor-pointer bg-[#13042C] rounded-[12px] transition-all duration-200 hover:bg-[#2A0960] peer-checked:bg-[#2A0960] peer-checked:border-[1.5px] peer-checked:shadow-[inset_0px_0px_20px_2px_#9747ffb2]"
+                          htmlFor={item.id}
+                        >
+                          <span className="text-[18px] font-semibold uppercase flex items-center justify-center gap-3">
+                            {item.label}
+                            <img
+                              src={item.imageSrc}
+                              alt={item.label + "-img"}
+                              className="w-5 h-5"
+                            />
+                          </span>
+                        </label>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
@@ -478,8 +544,12 @@ const home = () => {
                   Manual Payment
                 </button>
                 <div className="mt-3 text-base font-normal leading-[19px] flex items-start gap-2">
-                  <input type="checkbox" className="w-6 h-6" required />
-                  <span>
+                  <input
+                    type="checkbox"
+                    className="w-6 h-6 cursor-pointer"
+                    required
+                  />
+                  <span className="font-normal text-[16px] leading-[19.5px] text-[#D8D8D8]">
                     By making a transaction, you consent and agree to our Terms
                     and Conditions
                   </span>
@@ -509,11 +579,11 @@ const home = () => {
                 </span>
               </button>
 
-              <h3 className="text-[26px] lg:text-[46px] font-extrabold text-white leading-tight">
+              <h3 className="text-[28px] lg:text-[46px] lg:font-extrabold font-bold text-white lg:leading-[56.7px] leading-[34.13px]">
                 What We're Building:
               </h3>
 
-              <p className="text-[16px] text-white text-justify">
+              <p className="lg:text-[16px] text-[14px] text-white font-normal lg:leading-[19.5px] leading-[17.07px]">
                 Assetify Is A New Generation Decentralized Finance (DeFi)
                 Platform That Combines The Power Of Blockchain And Artificial
                 Intelligence (AI). On Our Platform, We Tokenize Real-World
@@ -539,7 +609,7 @@ const home = () => {
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <img src={rightIcon} alt="" />
-                    <h5 className="text-lg text-white">
+                    <h5 className="lg:text-[18px] text-[15px] text-white font-normal lg:leading-[27px] leading-[18.29px]">
                       <span className="font-medium">{item.title}</span>{" "}
                       {item.description}
                     </h5>
@@ -547,14 +617,14 @@ const home = () => {
                 ))}
               </div>
 
-              <p className="text-[16px] text-white text-justify">
+              <p className="lg:text-[16px] text-[14px] text-white font-normal lg:leading-[19.5px] leading-[17.07px]">
                 We are launching a Smart Wallet powered by AI to offer the
                 highest level of security, efficiency, and user friendly
                 features. Our mission is to make decentralized finance
                 accessible, transparent and profitable for everyone.
               </p>
 
-              <button className="self-start rounded-[8px] font-semibold text-[16px] leading-[17.07px] bg-[#301881] px-8 py-4 inner-shadow text-white">
+              <button className="lg:self-start rounded-[8px] font-semibold text-[16px] leading-[17.07px] bg-[#301881] px-8 py-4 inner-shadow text-white">
                 Join Now
               </button>
             </div>
@@ -565,7 +635,7 @@ const home = () => {
       {/* Smart Wallet Section */}
       <div className="bg-[#12032c] lg:pt-12 pt-6 font-montserrat">
         <div className="container mx-auto lg:px-8 px-4">
-          <div className="relative border border-[#8260b9] rounded-[22px] lg:p-10 p-4 bg-[url('/src/assets/outline.png')] bg-cover bg-no-repeat before:absolute before:inset-0 before:bg-[#12032c] before:opacity-80 before:rounded-[22px]">
+          <div className="relative border border-[#8260b9] rounded-[22px] lg:p-10 p-4 bg-[url('/src/assets/outline.png')] bg-cover bg-no-repeat before:absolute bg-fixed before:inset-0 before:bg-[#12032c] before:opacity-80 before:rounded-[22px]">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-10 items-center">
               {/* Left Content */}
               <div className="lg:col-span-7 flex flex-col gap-6">
@@ -599,15 +669,17 @@ const home = () => {
                   ].map((item, index) => (
                     <div key={index} className="flex items-center gap-3">
                       <img src={rightGreenIcon} alt="" className="w-6 h-6" />
-                      <h5 className="text-lg text-white">
-                        <span className="font-medium">{item.title}</span>{" "}
+                      <h5 className="lg:text-[16px] text-[15px] text-white font-normal lg:leading-[19.05px]">
+                        <span className="lg:text-[18px] font-medium">
+                          {item.title}
+                        </span>{" "}
                         {item.description}
                       </h5>
                     </div>
                   ))}
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {[
                     {
                       title: "Real-World Asset Tokenization",
@@ -656,11 +728,11 @@ const home = () => {
                 </div>
               </div>
 
-              <div className="lg:col-span-5">
+              <div className="lg:col-span-5 text-center">
                 <img
                   src={mobileGif}
                   alt="Smart Wallet Demo"
-                  className="w-full"
+                  className="w-4/5 mx-auto"
                 />
               </div>
             </div>
@@ -678,7 +750,7 @@ const home = () => {
                   Partners
                 </span>
               </button>
-              <h3 className="text-white font-extrabold lg:text-[46px] text-[28px] leading-[55px] text-center my-10">
+              <h3 className="text-white font-extrabold lg:text-[46px] text-[28px] leading-[55px] text-center lg:my-10 my-4">
                 Our Media Partners
               </h3>
               <div className="container mx-auto px-4">
@@ -817,7 +889,7 @@ const home = () => {
                 <h4 className="text-2xl font-semibold text-white lg:mb-6 mb-3">
                   Utility
                 </h4>
-                <div className="space-y-4 ml-4">
+                <div className="space-y-3 ml-4">
                   {[
                     {
                       title: "Governance:",
@@ -841,8 +913,10 @@ const home = () => {
                   ].map((item, index) => (
                     <div key={index} className="flex items-center gap-3">
                       <img src={rightIcon} alt="" className="w-6 h-6" />
-                      <h5 className="text-lg text-white">
-                        <span className="font-medium">{item.title}</span>{" "}
+                      <h5 className="lg:text-[16px] text-[15px] text-white font-normal lg:leading-[19.05px]">
+                        <span className="lg:text-[18px] font-medium">
+                          {item.title}
+                        </span>{" "}
                         {item.description}
                       </h5>
                     </div>
@@ -863,13 +937,15 @@ const home = () => {
                     {
                       title: "Deflationary Pressure:",
                       description:
-                        "A 1% burn tax is embedded into the token contract, reducing the circulating supply with every transaction and creating long-term scarcity. In addition, periodic buyback-and-burn events based on platform profits will sustain a long term deflationary effect.",
+                        "A 1% Burn Tax Is Embedded Into The Token Contract, Reducing The Circulating Supply With Every Transaction And Creating Long-Term Scarcity. In Addition, Periodic Buyback-And-Burn Events Based On Platform Profits Will Sustain A Long Term Deflationary Effect.",
                     },
                   ].map((item, index) => (
                     <div key={index} className="flex items-center gap-3">
                       <img src={rightIcon} alt="" className="w-6 h-6" />
-                      <h5 className="text-lg text-white">
-                        <span className="font-medium">{item.title}</span>{" "}
+                      <h5 className="lg:text-[16px] text-[15px] text-white font-normal lg:leading-[19.05px]">
+                        <span className="lg:text-[18px] font-medium">
+                          {item.title}
+                        </span>{" "}
                         {item.description}
                       </h5>
                     </div>
@@ -878,9 +954,9 @@ const home = () => {
               </div>
             </div>
 
-            <div className="border-t border-[#8260b9] my-4"></div>
+            <div className="border-t border-[#8260b9]"></div>
 
-            <div className="distribution-section">
+            <div>
               <h4 className="text-2xl font-semibold text-white mb-6">
                 Distribution Strategy
               </h4>
@@ -917,100 +993,92 @@ const home = () => {
               </div>
 
               <div>
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                  {[
-                    {
-                      phase: "Phase 01",
-                      title: "Foundation (Q1 2025)",
-                      items: [
-                        "Do a comprehensive security audit on $AST token.",
-                        "Presale Launch: Make $AST tokens available to early supporters at a discount.",
-                        "Release the whitepaper and tokenomics.",
-                        "Build community channels and initiate airdrop campaigns.",
-                      ],
+                <Swiper
+                  modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+                  breakpoints={{
+                    0: {
+                      slidesPerView: 1,
+                      spaceBetween: 20,
                     },
-                    {
-                      phase: "Phase 02",
-                      title: "Early Development (Q2–Q3 2025)",
-                      items: [
-                        "Launch cross chain enabled AI powered Smart Wallet.",
-                        "Begin CEX listings and integrate fiat onramp services.",
-                        "Start mobile app development, and sign up for beta testers.",
-                      ],
+                    768: {
+                      slidesPerView: 1,
+                      spaceBetween: 40,
                     },
-                    {
-                      phase: "Phase 03",
-                      title: "Platform Rollout (Q4 2025)",
-                      items: [
-                        "Launch DeFi marketplace for lending and trading tokenized assets.",
-                        "Deploy advanced AI tools and release the mobile app.",
-                        "Execute global marketing campaigns to expand awareness.",
-                      ],
+                    1199: {
+                      slidesPerView: 3,
+                      spaceBetween: 20,
                     },
-                  ].map((phase, index) => (
-                    <div key={index} className="relative">
-                      <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 hidden lg:block"></div>
-
-                      {/* Phase Card */}
-                      <div className="rounded-2xl lg:p-5 p-4 border border-[#8260b9] h-full">
-                        <button
-                          className="self-start px-5 py-2 rounded-lg text-[14px] text-sm text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors"
-                          style={{
-                            background:
-                              "linear-gradient(300deg, #200F56, #9747FF)",
-                            boxShadow: "6px 6px 24px 0px #9747FFB2 inset",
-                          }}
-                        >
-                          {phase.phase}
-                        </button>
-                        <h3 className="text-white text-[22px] font-extrabold leading-[25px] my-5">
-                          {phase?.title}
-                        </h3>
-                        <div className="space-y-4 px-4">
-                          {phase.items.map((item, itemIndex) => (
-                            <div key={itemIndex} className="flex gap-3">
-                              <img src={rightIcon} alt="" className="w-6 h-6" />
-                              <span className="text-white">{item}</span>
-                            </div>
-                          ))}
+                  }}
+                  spaceBetween={20}
+                  slidesPerView={3}
+                  onSwiper={(swiper) => (roadMapSec.current = swiper)}
+                  loop={true}
+                  autoplay={{
+                    delay: 400000000,
+                    disableOnInteraction: false,
+                  }}
+                >
+                  {RoadmapData.map((phase, index) => (
+                    <SwiperSlide key={index} className="road-map-slider">
+                      <div key={index} className="relative h-full">
+                        <div className="rounded-2xl lg:p-5 p-4 border border-[#8260b9] h-full">
+                          <button className="self-start rounded-[8px] text-[14px] leading-[17.07px] bg-[#301881]  px-5 py-3 inner-shadow text-white">
+                            {phase.phase}
+                          </button>
+                          <h3 className="text-white text-[22px] font-extrabold leading-[25px] my-5">
+                            {phase?.title}
+                          </h3>
+                          <div className="space-y-4 px-4">
+                            {phase.items.map((item, itemIndex) => (
+                              <div key={itemIndex} className="flex gap-3">
+                                <img
+                                  src={rightIcon}
+                                  alt=""
+                                  className="w-6 h-6"
+                                />
+                                <span className="text-white">{item}</span>
+                              </div>
+                            ))}
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </SwiperSlide>
                   ))}
-                </div>
+                </Swiper>
+              </div>
 
-                {/* Navigation */}
-                <div className="flex justify-between items-center mt-6">
+              <div className="flex justify-between items-center mt-6">
+                <button
+                  className="self-start lg:px-5 px-4 lg:py-3 py-2 rounded-lg lg:text-[18px] text-[14px] leading-[21px] font-semibold text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors"
+                  style={{
+                    background: "linear-gradient(300deg, #200F56, #9747FF)",
+                    boxShadow: "6px 6px 24px 0px #9747FFB2 inset",
+                  }}
+                >
+                  Explore the Roadmap
+                </button>
+
+                <div className="flex gap-4">
                   <button
-                    className="self-start lg:px-5 px-4 lg:py-3 py-2 rounded-lg lg:text-[18px] text-[14px] leading-[21px] font-semibold text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors"
+                    className="p-4 rounded-full bg-[#301881] border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors"
+                    onClick={() => roadMapSec?.current?.slidePrev()}
                     style={{
                       background: "linear-gradient(300deg, #200F56, #9747FF)",
                       boxShadow: "6px 6px 24px 0px #9747FFB2 inset",
                     }}
                   >
-                    Explore the Roadmap
+                    <img src={leftArrow} alt="" className="w-6 h-6" />
                   </button>
-
-                  <div className="flex gap-4">
-                    <button
-                      className="p-4 rounded-full bg-[#301881] border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors"
-                      style={{
-                        background: "linear-gradient(300deg, #200F56, #9747FF)",
-                        boxShadow: "6px 6px 24px 0px #9747FFB2 inset",
-                      }}
-                    >
-                      <img src={leftArrow} alt="" className="w-6 h-6" />
-                    </button>
-                    <button
-                      className="p-4 rounded-full bg-[#301881] border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors"
-                      style={{
-                        background: "linear-gradient(300deg, #200F56, #9747FF)",
-                        boxShadow: "6px 6px 24px 0px #9747FFB2 inset",
-                      }}
-                    >
-                      <img src={rightArrow} alt="" className="w-6 h-6" />
-                    </button>
-                  </div>
+                  <button
+                    className="p-4 rounded-full bg-[#301881] border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors"
+                    onClick={() => roadMapSec?.current?.slideNext()}
+                    style={{
+                      background: "linear-gradient(300deg, #200F56, #9747FF)",
+                      boxShadow: "6px 6px 24px 0px #9747FFB2 inset",
+                    }}
+                  >
+                    <img src={rightArrow} alt="" className="w-6 h-6" />
+                  </button>
                 </div>
               </div>
             </div>
@@ -1024,7 +1092,7 @@ const home = () => {
           <div className="flex flex-wrap">
             <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
               <div>
-                <img src={howItWork} alt="currency" className="w-full" />
+                <img src={howItWork} alt="currency" className="w-4/5 mx-auto" />
               </div>
             </div>
             <div className="w-full lg:w-1/2 text-white">
@@ -1119,64 +1187,71 @@ const home = () => {
             <h3 className="lg:text-[46px] text-[35px] font-extrabold text-white leading-tight">
               Our Blog
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  id: 1,
-                  title: "What is Bitcoin Mining",
-                  description:
-                    "Nemo enim ipsam voluptatem quia volup tas sit aspernatur aut odit aut fu sed quia.....",
-                  image: currency,
-                },
-                {
-                  id: 2,
-                  title: "What is Bitcoin Mining",
-                  description:
-                    "Nemo enim ipsam voluptatem quia volup tas sit aspernatur aut odit aut fu sed quia.....",
-                  image: currency,
-                },
-                {
-                  id: 3,
-                  title: "What is Bitcoin Mining",
-                  description:
-                    "Nemo enim ipsam voluptatem quia volup tas sit aspernatur aut odit aut fu sed quia.....",
-                  image: currency,
-                },
-              ].map((blog) => (
-                <div key={blog.id} className="relative">
-                  <img
-                    src={blog.image}
-                    alt="currency"
-                    className="w-[424px] h-[240px] object-cover rounded-[12px]"
-                  />
-                  <button
-                    className="absolute top-4 left-4 text-white text-sm px-4 py-2 rounded-md"
-                    style={{
-                      background:
-                        "linear-gradient(to right, #200F56 0%, #9747FF 100%)",
-                      boxShadow:
-                        "inset 6px 6px 24px 0px rgba(151, 71, 255, 0.7)",
-                    }}
-                  >
-                    Jan 15
-                  </button>
-                  <h4 className="text-white text-[22px] font-bold mt-4">
-                    {blog.title}
-                  </h4>
-                  <p className="text-white text-[17px] font-normal leading-5 mt-4 mb-5">
-                    {blog.description}
-                  </p>
-                  <button
-                    className="self-start px-6 py-2 rounded-lg text-[18px] font-medium text-sm text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors"
-                    style={{
-                      background: "linear-gradient(300deg, #200F56, #9747FF)",
-                      boxShadow: "6px 6px 24px 0px #9747FFB2 inset",
-                    }}
-                  >
-                    Read More
-                  </button>
-                </div>
-              ))}
+
+            <div>
+              <Swiper
+                modules={[Autoplay]}
+                breakpoints={{
+                  0: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                  },
+                  768: {
+                    slidesPerView: 1,
+                    spaceBetween: 40,
+                  },
+                  1199: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                  },
+                }}
+                spaceBetween={20}
+                slidesPerView={3}
+                loop={true}
+                autoplay={{
+                  delay: 4000,
+                  disableOnInteraction: false,
+                }}
+              >
+                {blogsData.map((blog, index) => (
+                  <SwiperSlide key={index}>
+                    <div key={blog.id} className="relative">
+                      <img
+                        src={blog.image}
+                        alt="currency"
+                        className="w-[424px] h-[240px] object-cover rounded-[12px]"
+                      />
+                      <button
+                        className="absolute top-4 left-4 text-white text-sm px-4 py-2 rounded-md"
+                        style={{
+                          background:
+                            "linear-gradient(to right, #200F56 0%, #9747FF 100%)",
+                          boxShadow:
+                            "inset 6px 6px 24px 0px rgba(151, 71, 255, 0.7)",
+                        }}
+                      >
+                        Jan 15
+                      </button>
+                      <h4 className="text-white text-[22px] font-bold mt-4">
+                        {blog.title}
+                      </h4>
+                      <p className="text-white text-[17px] font-normal leading-5 mt-4 mb-5">
+                        {blog.description}
+                      </p>
+                      <button
+                        className="self-start px-6 py-2 rounded-lg text-[18px] font-medium text-sm text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors"
+                        style={{
+                          background:
+                            "linear-gradient(300deg, #200F56, #9747FF)",
+                          boxShadow: "6px 6px 24px 0px #9747FFB2 inset",
+                        }}
+                      >
+                        Read More
+                      </button>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
           </div>
         </div>
@@ -1185,13 +1260,13 @@ const home = () => {
       {/* FAQ Section */}
       <div className="bg-[#12032c]  lg:py-10 py-6 font-montserrat">
         <div className="container mx-auto lg:px-12 px-6">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-center lg:justify-start md:justify-start">
             <button className="self-start rounded-lg font-semibold text-[16px] leading-[17.07px] bg-[#301881] px-5 py-3 inner-shadow text-white">
               Faq
             </button>
           </div>
-          <div className="lg:flex justify-between items-center my-6">
-            <h3 className="lg:text-[46px] text-[25px] font-extrabold text-white leading-tight mb-6 lg:mb-0">
+          <div className="lg:flex md:flex justify-between items-center my-6">
+            <h3 className="lg:text-[46px] text-[28px] lg:font-extrabold font-bold text-white lg:leading-[56px] leading-[34.13px] lg:mb-0 md:mb-0 mb-6 text-center md:text-start">
               Frequently Asked Questions
             </h3>
 
@@ -1266,7 +1341,7 @@ const home = () => {
                           selectedLanguage.code === language.code
                             ? "bg-gray-100 text-gray-900"
                             : "text-white"
-                        } group flex items-center w-full px-4 py-2.5 text-sm hover:bg-gray-50 gap-1`}
+                        } group flex items-center w-full px-4 py-2.5 text-sm gap-1`}
                         onClick={() => {
                           setSelectedLanguage(language);
                           setIsOpen(false);
