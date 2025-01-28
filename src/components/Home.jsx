@@ -487,43 +487,43 @@ const home = () => {
             <div className="flex flex-col space-y-4 pt-4 pb-3">
               <Link
                 to="#"
-                className="hover:text-gray-300 transition duration-200 py-2"
+                className="hover:text-gray-300 font-medium transition duration-200 py-2"
               >
                 About us
               </Link>
               <Link
                 to="#"
-                className="hover:text-gray-300 transition duration-200 py-2"
+                className="hover:text-gray-300 font-medium transition duration-200 py-2"
               >
                 Why Us
               </Link>
               <Link
                 to="#"
-                className="hover:text-gray-300 transition duration-200 py-2"
+                className="hover:text-gray-300 font-medium transition duration-200 py-2"
               >
                 Roadmap
               </Link>
               <Link
                 to="#"
-                className="hover:text-gray-300 transition duration-200 py-2"
+                className="hover:text-gray-300 font-medium transition duration-200 py-2"
               >
                 Resources
               </Link>
               <Link
                 to="#"
-                className="hover:text-gray-300 transition duration-200 py-2"
+                className="hover:text-gray-300 font-medium transition duration-200 py-2"
               >
                 Token Allocation
               </Link>
               <Link
                 to="#"
-                className="hover:text-gray-300 transition duration-200 py-2"
+                className="hover:text-gray-300 font-medium transition duration-200 py-2"
               >
                 Audits
               </Link>
               <Link
                 to="#"
-                className="hover:text-gray-300 transition duration-200 py-2"
+                className="hover:text-gray-300 font-medium transition duration-200 py-2"
               >
                 FAQs
               </Link>
