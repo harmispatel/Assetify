@@ -942,7 +942,7 @@ const home = () => {
                   ].map((item, index) => (
                     <div key={index} className="flex items-center gap-3">
                       <img src={rightIcon} alt="" className="w-6 h-6" />
-                      <h5 className="lg:text-[16px] text-[15px] text-white font-normal lg:leading-[19.05px]">
+                      <h5 className="lg:text-[16px] text-[15px] text-white font-normal lg:leading-[19.05px] tracking-[1px]">
                         <span className="lg:text-[18px] font-medium">
                           {item.title}
                         </span>{" "}
