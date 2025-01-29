@@ -12,7 +12,7 @@ import HowItWork from "./homeSections/HowItWork";
 import Blogs from "./homeSections/Blogs";
 import Faqs from "./homeSections/Faqs";
 import Footer from "../Common/Footer";
-import AiPowered from "./HomeSections/AiPowered";
+import AiPowered from "./homeSections/AiPowered"
 
 const home = () => {
   return (
