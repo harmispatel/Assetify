@@ -138,11 +138,11 @@ const SmartWallet = () => {
                       disableOnInteraction: false,
                     }}
                     pagination={{
-                      clickable: true, // Make dots clickable
-                      el: ".custom-pagination", // Specify a custom class for pagination
-                      type: "bullets", // Type of pagination, 'bullets' for dots
-                      bulletClass: "custom-pagination-dot", // Custom class for each dot
-                      bulletActiveClass: "custom-pagination-dot-active", // Custom active dot class
+                      clickable: true,
+                      el: ".custom-pagination",
+                      type: "bullets",
+                      bulletClass: "custom-pagination-dot",
+                      bulletActiveClass: "custom-pagination-dot-active",
                     }}
                   >
                     {aiDrivenData.map((item, index) => (
