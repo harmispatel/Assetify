@@ -3,6 +3,7 @@ import "../index.css";
 import "swiper/css";
 
 import Navbar from "../Common/Navbar";
+import PowerdDefi from "./homeSections/PowerdDefi";
 import BuildingSection from "./homeSections/BuildingSection";
 import SmartWallet from "./homeSections/SmartWallet";
 import MediaPartners from "./homeSections/MediaPartners";
@@ -13,7 +14,6 @@ import HowItWork from "./homeSections/HowItWork";
 import Blogs from "./homeSections/Blogs";
 import Faqs from "./homeSections/Faqs";
 import Footer from "../Common/Footer";
-import PowerdDefi from "./homeSections/PowerdDefi";
 
 const home = () => {
   return (

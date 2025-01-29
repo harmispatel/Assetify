@@ -79,3 +79,22 @@
   justify-content: center;
   margin-top: 20px;
 }
+
+.bg-diamond-gradient {
+  background: radial-gradient(circle at 77.73% 73%, #200f56, #9747ff);
+}
+
+.common-btn-color {
+  background: linear-gradient(90deg, #ffffff 0%, #e077ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.shadow-inset-custom {
+  box-shadow: inset 6px 6px 24px 0px #9747ffb2;
+}
+
+.blog-btn{
+  background: radial-gradient(123.63% 269.03% at 77.73% 73%, #200F56 21.04%, #9747FF 100%);
+}
