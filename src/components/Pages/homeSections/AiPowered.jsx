@@ -154,12 +154,12 @@ const AiPowered = () => {
                   <button className="w-[100%] rounded-[8px] font-semibold text-[16px] leading-[17.07px] bg-white text-[#0E0F23] border border-[#8260b9]  px-6 py-4">
                     Manual Payment
                   </button>
-                  {/* <div className="py-[18px] px-[22px] bg-[#753DD1] inline-block font-semibold text-lg leading-[21.94px] rounded-tl-lg rounded-tr-lg w-auto absolute right-0 lg:bottom-[145px] md:bottom-[125px] bottom-[140px]">
+                  <div className="py-[18px] px-[22px] bg-[#753DD1] inline-block font-semibold text-lg leading-[21.94px] rounded-tl-lg rounded-tr-lg w-auto absolute right-0 lg:bottom-[145px] md:bottom-[125px] bottom-[140px]">
                     <span className="flex items-center justify-center gap-3">
                       Leave a Message{" "}
                       <img src={mesageBox} className="w-5 h-5" />
                     </span>
-                  </div> */}
+                  </div>
                 </div>
                 <div className="mt-3 text-base font-normal leading-[19px] flex items-start gap-2">
                   <input
