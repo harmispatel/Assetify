@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./index.css";
+import "../index.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Navigation,
@@ -7,45 +7,44 @@ import {
   Scrollbar,
   A11y,
   Autoplay,
-  EffectFade,
 } from "swiper/modules";
 import "swiper/css";
-import Logo from "../assets/logo.svg";
-import copyIcon from "../assets/image 15.png";
-import solidProof from "../assets/solidProof1.png";
-import Dashboard1 from "../assets/Dashboard 3D 1.png";
-import bnb1 from "../assets/BNB.png";
-import busd from "../assets/BUSD.png";
-import eth from "../assets/ETH.png";
-import usdt from "../assets/usdt.png";
-import other from "../assets/othes.png";
-import inputGroup from "../assets/inputGroup.png";
-import rightIcon from "../assets/rightIcon.svg";
-import rightGreenIcon from "../assets/rightGreen.svg";
-import mobileGif from "../assets/Mobile Without White Space .gif";
-import aiImage1 from "../assets/Mask group (6).png";
-import aiImage2 from "../assets/Mask group (1).png";
-import aiImage3 from "../assets/Mask group (2).png";
-import aiImage4 from "../assets/Mask group (3).png";
-import aiImage5 from "../assets/Mask group (4).png";
-import aiImage6 from "../assets/Mask group (5).png";
-import currency from "../assets/currency.png";
-import howItWork from "../assets/How It Works .gif";
-import roadMapLine from "../assets/Roadmap-Line.svg";
-import leftArrow from "../assets/left-arrow.svg";
-import rightArrow from "../assets/right-arrow.svg";
-import astView from "../assets/AST.gif";
-import analytics from "../assets/CryptoSider/analytics.png";
-import blockChain from "../assets/CryptoSider/blockChain.png";
-import blockOnomi from "../assets/CryptoSider/BlockOnomi.png";
-import coinPedia from "../assets/CryptoSider/CoinPedia.png";
-import cryptoDaily from "../assets/CryptoSider/cryptoDaily.png";
-import finBold from "../assets/CryptoSider/finBold.png";
-import newsBtc from "../assets/CryptoSider/newsBtc.png";
-import theNewsCrypto from "../assets/CryptoSider/theNewsCrypto.png";
+import copyIcon from "../../assets/image 15.png";
+import solidProof from "../../assets/solidProof1.png";
+import Dashboard1 from "../../assets/Dashboard 3D 1.png";
+import bnb1 from "../../assets/BNB.png";
+import busd from "../../assets/BUSD.png";
+import eth from "../../assets/ETH.png";
+import usdt from "../../assets/usdt.png";
+import other from "../../assets/othes.png";
+import mesageBox from "../../assets/MessageBox.png";
+import inputGroup from "../../assets/inputGroup.png";
+import rightIcon from "../../assets/rightIcon.svg";
+import rightGreenIcon from "../../assets/rightGreen.svg";
+import mobileGif from "../../assets/Mobile Without White Space .gif";
+import aiImage1 from "../../assets/Mask group (6).png";
+import aiImage2 from "../../assets/Mask group (1).png";
+import aiImage3 from "../../assets/Mask group (2).png";
+import aiImage4 from "../../assets/Mask group (3).png";
+import aiImage5 from "../../assets/Mask group (4).png";
+import aiImage6 from "../../assets/Mask group (5).png";
+import currency from "../../assets/currency.png";
+import howItWork from "../../assets/How It Works .gif";
+import roadMapLine from "../../assets/Roadmap-Line.svg";
+import leftArrow from "../../assets/left-arrow.svg";
+import rightArrow from "../../assets/right-arrow.svg";
+import astView from "../../assets/AST.gif";
+import analytics from "../../assets/CryptoSider/analytics.png";
+import blockChain from "../../assets/CryptoSider/blockChain.png";
+import blockOnomi from "../../assets/CryptoSider/BlockOnomi.png";
+import coinPedia from "../../assets/CryptoSider/CoinPedia.png";
+import cryptoDaily from "../../assets/CryptoSider/cryptoDaily.png";
+import finBold from "../../assets/CryptoSider/finBold.png";
+import newsBtc from "../../assets/CryptoSider/newsBtc.png";
+import theNewsCrypto from "../../assets/CryptoSider/theNewsCrypto.png";
 import { Minus, Plus, X } from "lucide-react";
-import Footer from "./Common/Footer";
-import Navbar from "./Common/Navbar";
+import Footer from "../Common/Footer";
+import Navbar from "../Common/Navbar";
 
 const home = () => {
   const radioItems = [
@@ -298,20 +297,20 @@ const home = () => {
 
   function FAQItem({ question, answer, isOpen, onClick }) {
     return (
-      <div className="mb-4">
+      <div className="lg:mb-4 mb-6">
         <div
           style={{
             background: isOpen
               ? "linear-gradient(180deg, #12032C 0%, #9747FF 253.6%)"
               : "",
           }}
-          className="rounded-lg border border-[#8260B9] transition-all duration-300"
+          className="rounded-xl border border-[#8260B9] transition-all duration-300"
         >
           <button
             onClick={onClick}
-            className="w-full text-left p-6 flex justify-between items-center"
+            className="w-full text-left py-6 px-4 flex justify-between items-center"
           >
-            <span className="text-xl font-semibold leading-[27px] text-white">
+            <span className=" lg:text-[22px] lg:font-semibold  text-[18px] font-medium leading-[26.82px] text-white">
               {question}
             </span>
             {isOpen ? (
@@ -349,7 +348,7 @@ const home = () => {
                 <span className="text-[#6E45E9]">Real-World Assets.</span>
               </h3>
 
-              <p className="text-[18px] text-white text-justify">
+              <p className="text-[18px] text-white lg:font-medium md:font-medium ">
                 Simplifying investments with AI, tokenizing real-world assets
                 for everyone - Powered By Assetify
               </p>
@@ -376,7 +375,7 @@ const home = () => {
               </div>
             </div>
             <div className="grid place-items-end">
-              <div className="border border-[#8260b9] lg:w-[500px] text-white lg:p-6 p-4 rounded-2xl">
+              <div className="border border-[#8260b9] lg:w-[500px] text-white lg:p-6 p-4 rounded-2xl relative">
                 <div>
                   <h4 className="text-[24px] font-extrabold text-center">
                     Join the Revolution:
@@ -465,12 +464,20 @@ const home = () => {
                   </div>
                 </div>
 
-                <button className="w-[100%] rounded-[8px] mb-3 font-semibold text-[16px] leading-[17.07px] bg-[#301881]  px-6 py-4 inner-shadow text-white">
-                  Connect Wallet
-                </button>
-                <button className="w-[100%] rounded-[8px] font-semibold text-[16px] leading-[17.07px] bg-white text-[#0E0F23] border border-[#8260b9]  px-6 py-4">
-                  Manual Payment
-                </button>
+                <div className="">
+                  <button className="w-[100%] rounded-[8px] mb-3 font-semibold text-[16px] leading-[17.07px] bg-[#301881]  px-6 py-4 inner-shadow text-white">
+                    Connect Wallet
+                  </button>
+                  <button className="w-[100%] rounded-[8px] font-semibold text-[16px] leading-[17.07px] bg-white text-[#0E0F23] border border-[#8260b9]  px-6 py-4">
+                    Manual Payment
+                  </button>
+                  <div className="py-[18px] px-[22px] bg-[#753DD1] inline-block font-semibold text-lg leading-[21.94px] rounded-tl-lg rounded-tr-lg w-auto absolute right-0 lg:bottom-[145px] md:bottom-[125px] bottom-[140px]">
+                    <span className="flex items-center justify-center gap-3">
+                      Leave a Message{" "}
+                      <img src={mesageBox} className="w-5 h-5" />
+                    </span>
+                  </div>
+                </div>
                 <div className="mt-3 text-base font-normal leading-[19px] flex items-start gap-2">
                   <input
                     type="checkbox"
@@ -652,6 +659,13 @@ const home = () => {
                       delay: 4000,
                       disableOnInteraction: false,
                     }}
+                    pagination={{
+                      clickable: true, // Make dots clickable
+                      el: ".custom-pagination", // Specify a custom class for pagination
+                      type: "bullets", // Type of pagination, 'bullets' for dots
+                      bulletClass: "custom-pagination-dot", // Custom class for each dot
+                      bulletActiveClass: "custom-pagination-dot-active", // Custom active dot class
+                    }}
                   >
                     {aiDrivenData.map((item, index) => (
                       <SwiperSlide key={index} className="road-map-slider">
@@ -676,6 +690,7 @@ const home = () => {
                       </SwiperSlide>
                     ))}
                   </Swiper>
+                  <div className="custom-pagination" />
                 </div>
               </div>
 
@@ -733,25 +748,23 @@ const home = () => {
       </div>
 
       {/* Key Features Section */}
-      <div className="bg-custom-image bg-no-repeat bg-cover bg-center lg:py-12 py-6 font-montserrat">
+      <div className="bg-custom-image bg-no-repeat bg-cover bg-center lg:py-12 py-16 font-montserrat">
         <div className="container mx-auto lg:px-20 px-4">
-          <button className="self-start px-8 py-3 rounded-lg font-semibold text-sm text-white bg-[#301881] border border-[#8260b9] inner-shadow">
+          <button className="self-center px-[22px] py-[10px] rounded-lg font-semibold flex m-auto lg:ml-0 md:ml-0 text-sm text-white bg-[#301881] border border-[#8260b9] inner-shadow">
             <span className="bg-gradient-to-r from-[#FFFFFF] to-[#E077FF] bg-clip-text text-transparent">
               Our Services
             </span>
           </button>
-          <div className="flex justify-between items-center my-5">
-            <h3 className="text-white font-extrabold lg:text-[46px] text-[28px] leading-[55px]">
+
+          <div className="lg:flex lg:justify-between lg:items-center md:flex md:justify-between md:items-center my-5">
+            <h3 className="text-white lg:font-extrabold md:font-extrabold font-bold lg:text-[46px] text-[28px] lg:leading-[55px] md:leading-[40px] leading-[34.13px] text-center">
               Key Features
             </h3>
-
-            <div>
-              <button className="self-start px-8 py-3 rounded-lg font-semibold text-sm text-white bg-[#301881] border border-[#8260b9] inner-shadow">
-                <span className="bg-gradient-to-r from-[#FFFFFF] to-[#E077FF] bg-clip-text text-transparent">
-                  Buy Now
-                </span>
-              </button>
-            </div>
+            <button className="lg:block md:block hidden self-start px-8 py-3 rounded-lg font-semibold text-sm text-white bg-[#301881] border border-[#8260b9] inner-shadow">
+              <span className="bg-gradient-to-r from-[#FFFFFF] to-[#E077FF] bg-clip-text text-transparent">
+                Buy Now
+              </span>
+            </button>
           </div>
           <div className="">
             <div className="container mx-auto">
@@ -814,6 +827,11 @@ const home = () => {
               </div>
             </div>
           </div>
+          <button className="lg:hidden md:hidden w-full  self-start px-[32px] py-[12px] mt-6 w-full  rounded-lg font-semibold text-[18px] text-white bg-[#301881] border border-[#8260b9] inner-shadow">
+            <span className="bg-gradient-to-r from-[#FFFFFF] to-[#E077FF] bg-clip-text text-transparent">
+              Buy Now
+            </span>
+          </button>
         </div>
       </div>
 
@@ -917,7 +935,7 @@ const home = () => {
             <div className="border-t border-[#8260b9] my-4"></div>
 
             <button
-              className="self-start px-6 py-3 rounded-lg text-[18px] font-semibold text-sm text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors"
+              className="self-start px-[32px] md:py-[15px] py-[12px] w-full md:w-auto rounded-xl text-[18px] font-semibold text-sm text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors"
               style={{
                 background: "linear-gradient(300deg, #200F56, #9747FF)",
                 boxShadow: "6px 6px 24px 0px #9747FFB2 inset",
@@ -943,64 +961,62 @@ const home = () => {
                 <img src={roadMapLine} alt="" />
               </div>
 
-              <div>
-                <Swiper
-                  modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-                  breakpoints={{
-                    0: {
-                      slidesPerView: 1,
-                      spaceBetween: 20,
-                    },
-                    768: {
-                      slidesPerView: 1,
-                      spaceBetween: 40,
-                    },
-                    1199: {
-                      slidesPerView: 3,
-                      spaceBetween: 20,
-                    },
-                  }}
-                  spaceBetween={20}
-                  slidesPerView={3}
-                  onSwiper={(swiper) => (roadMapSec.current = swiper)}
-                  loop={true}
-                  autoplay={{
-                    delay: 4000,
-                    disableOnInteraction: false,
-                  }}
-                >
-                  {RoadmapData.map((phase, index) => (
-                    <SwiperSlide key={index} className="road-map-slider">
-                      <div key={index} className="relative h-full">
-                        <div className="rounded-2xl lg:p-5 p-4 border border-[#8260b9] h-full">
-                          <button className="self-start rounded-[8px] text-[14px] leading-[17.07px] bg-[#301881]  px-5 py-3 inner-shadow text-white">
-                            {phase.phase}
-                          </button>
-                          <h3 className="text-white text-[22px] font-extrabold leading-[25px] my-5">
-                            {phase?.title}
-                          </h3>
-                          <div className="space-y-4 px-4">
-                            {phase.items.map((item, itemIndex) => (
-                              <div key={itemIndex} className="flex gap-3">
-                                <img
-                                  src={rightIcon}
-                                  alt=""
-                                  className="w-6 h-6"
-                                />
-                                <span className="text-white">{item}</span>
-                              </div>
-                            ))}
-                          </div>
+              <Swiper
+                modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+                breakpoints={{
+                  0: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                  },
+                  768: {
+                    slidesPerView: 1,
+                    spaceBetween: 40,
+                  },
+                  1199: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                  },
+                }}
+                spaceBetween={20}
+                slidesPerView={3}
+                onSwiper={(swiper) => (roadMapSec.current = swiper)}
+                loop={true}
+                autoplay={{
+                  delay: 4000,
+                  disableOnInteraction: false,
+                }}
+                pagination={{
+                  clickable: true,
+                  el: ".swiper-pagination",
+                }}
+              >
+                {RoadmapData.map((phase, index) => (
+                  <SwiperSlide key={index} className="road-map-slider">
+                    <div key={index} className="relative h-full">
+                      <div className="rounded-2xl lg:p-5 p-4 border border-[#8260b9] h-full">
+                        <button className="self-start rounded-[8px] text-[14px] leading-[17.07px] bg-[#301881]  px-5 py-3 inner-shadow text-white">
+                          {phase.phase}
+                        </button>
+                        <h3 className="text-white text-[22px] font-extrabold leading-[25px] my-5">
+                          {phase?.title}
+                        </h3>
+                        <div className="space-y-4 px-4">
+                          {phase.items.map((item, itemIndex) => (
+                            <div key={itemIndex} className="flex gap-3">
+                              <img src={rightIcon} alt="" className="w-6 h-6" />
+                              <span className="text-white">{item}</span>
+                            </div>
+                          ))}
                         </div>
                       </div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </div>
-
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+              <div className="swiper-pagination my-4 lg:hidden md:hidden"></div>
               <div className="flex justify-between items-center mt-6">
                 <button
-                  className="self-start lg:px-5 px-4 lg:py-3 py-2 rounded-lg lg:text-[18px] text-[14px] leading-[21px] font-semibold text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors"
+                  className="self-start w-full md:w-auto md:px-5 md:py-3 px-[32px] py-[12px] rounded-xl lg:text-[18px] md:text-[18px] text-[16px] leading-[21px] font-medium text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors"
                   style={{
                     background: "linear-gradient(300deg, #200F56, #9747FF)",
                     boxShadow: "6px 6px 24px 0px #9747FFB2 inset",
@@ -1009,7 +1025,7 @@ const home = () => {
                   Explore the Roadmap
                 </button>
 
-                <div className="flex gap-4">
+                <div className="lg:flex md:flex lg:gap-4 md:gap-4 hidden">
                   <button
                     className="p-4 rounded-full bg-[#301881] border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors"
                     onClick={() => roadMapSec?.current?.slidePrev()}
@@ -1212,8 +1228,8 @@ const home = () => {
       <div className="bg-[#12032c]  lg:py-10 py-6 font-montserrat">
         <div className="container mx-auto lg:px-12 px-6">
           <div className="flex justify-center lg:justify-start md:justify-start">
-            <button className="self-start rounded-lg font-semibold text-[16px] leading-[17.07px] bg-[#301881] px-5 py-3 inner-shadow text-white">
-              Faq
+            <button className="self-start rounded-lg font-semibold text-[16px] leading-[17.07px] bg-[#301881] py-[10px] px-[22px] inner-shadow text-white">
+              Faqs
             </button>
           </div>
           <div className="lg:flex md:flex justify-between items-center my-6">
@@ -1221,7 +1237,7 @@ const home = () => {
               Frequently Asked Questions
             </h3>
 
-            <button className="self-start rounded-lg font-semibold text-[16px] leading-[17.07px] bg-[#301881] px-8 py-4 inner-shadow text-white">
+            <button className="lg:block md:block hidden self-start rounded-lg font-semibold text-[16px] leading-[17.07px] bg-[#301881] px-8 py-4 inner-shadow text-white">
               Buy Now
             </button>
           </div>
@@ -1237,6 +1253,9 @@ const home = () => {
               />
             ))}
           </div>
+          <button className="lg:hidden md:hidden w-full mt-6 block lg:self-start rounded-lg font-semibold text-[16px] leading-[17.07px] bg-[#301881] px-8 py-4 inner-shadow text-white">
+            Buy Now
+          </button>
         </div>
       </div>
 

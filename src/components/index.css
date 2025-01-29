@@ -18,10 +18,64 @@
   box-shadow: inset 6px 6px 24px 0px #9747ffb2;
 }
 
-.road-map-slider{
+.road-map-slider {
   height: auto !important;
 }
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+.swiper-pagination {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .swiper-pagination {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .swiper-pagination {
+    display: flex !important;
+  }
+}
+
+.swiper-pagination {
+  position: relative;
+  bottom: 0;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet,
+.custom-pagination-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #8260b9;
+  border: 2px solid #6e45e9;
+  border-radius: 50%;
+  margin: 0 6px;
+  transition: background-color 0.3s;
+}
+
+.swiper-pagination-bullet-active,
+.custom-pagination-dot-active {
+  background-color: #6e45e9;
+  border: 2px solid #ffffff;
+  width: 16px;
+  height: 16px;
+}
+
+.swiper-pagination-bullet:hover {
+  background-color: #6e45e9;
+}
+
+.custom-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
