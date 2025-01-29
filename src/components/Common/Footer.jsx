@@ -33,7 +33,6 @@ const Footer = () => {
       const spaceBelow = window.innerHeight - rect.bottom;
       const spaceAbove = rect.top;
 
-      // Check if there's enough space to open the dropdown upwards
       setIsTop(spaceAbove > spaceBelow);
     }
   }, [isOpen]);
@@ -42,7 +41,6 @@ const Footer = () => {
     <>
       <footer className="bg-[#12032c] lg:py-10 py-6 font-montserrat text-white">
         <div className="container mx-auto lg:px-12 px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Left Section */}
           <div className="flex flex-col items-start">
             <Link to="/" className="logo" href="#">
               <img src={Logo} alt="" className="w-[134px] h-[34px]" />
@@ -116,7 +114,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Middle Section */}
           <div>
             <h3 className="text-lg font-semibold text-purple-500 mb-4">
               Follow Us
@@ -137,7 +134,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Right Section */}
           <div>
             <h3 className="text-lg font-semibold text-purple-500 mb-4">
               Documentation
