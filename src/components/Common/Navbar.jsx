@@ -45,14 +45,14 @@ const Navbar = () => {
             {/* Mobile menu button */}
             <button
               onClick={toggleMenu}
-              className="lg:hidden text-white hover:text-gray-300"
+              className="xl:hidden text-white hover:text-gray-300"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
 
             {/* Desktop Menu */}
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className="hidden xl:flex items-center space-x-8">
               <Link
                 to="#"
                 className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200"
@@ -109,7 +109,7 @@ const Navbar = () => {
 
           {/* Mobile Menu */}
           <div
-            className={`lg:hidden ${
+            className={`xl:hidden ${
               isMenuOpen
                 ? "block absolute top-[74px] left-0 bg-[#12032c] w-full p-[10px]"
                 : "hidden"

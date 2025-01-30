@@ -78,10 +78,14 @@ const AssetifyToken = () => {
             <div className="border-t border-[#8260b9]"></div>
 
             <div>
-              <h4 className="text-2xl font-semibold text-white mb-6">
+              <h4 className="xl:text-2xl text-[20px] font-semibold text-white mb-6">
                 Distribution Strategy
               </h4>
-              <img src={astView} alt="AST Distribution" className="w-full" />
+              <img
+                src={astView}
+                alt="AST Distribution"
+                className="w-full"
+              />
             </div>
 
             <div className="border-t border-[#8260b9] my-4"></div>

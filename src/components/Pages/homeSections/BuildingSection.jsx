@@ -19,8 +19,8 @@ const features = [
 
 const BuildingSection = () => (
   <div className="bg-[#12032c] lg:py-12 py-6 font-montserrat">
-    <div className="container mx-auto lg:px-8 px-4">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div className="container mx-auto xl:px-8 lg:px-8 px-4">
+      <div className="grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-8">
         <img
           src={Dashboard1}
           alt="What We're Building"

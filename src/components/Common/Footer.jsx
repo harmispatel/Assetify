@@ -39,7 +39,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="bg-[#12032c] lg:py-10 py-6 font-montserrat text-white">
+      <footer className="bg-[#12032c] lg:py-10 py-6 text-white">
         <div className="container mx-auto lg:px-12 px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="flex flex-col items-start">
             <Link to="/" className="logo" href="#">

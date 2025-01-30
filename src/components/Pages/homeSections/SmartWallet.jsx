@@ -49,7 +49,7 @@ const SmartWallet = () => {
       <div className="bg-[#12032c] lg:pt-12 pt-6 font-montserrat">
         <div className="container mx-auto lg:px-8 px-4">
           <div className="relative border border-[#8260b9] rounded-[22px] lg:p-10 p-4 bg-[url('/src/assets/outline.png')] bg-cover bg-no-repeat before:absolute bg-fixed before:inset-0 before:bg-[#12032c] before:opacity-80 before:rounded-[22px]">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-10 items-center">
+            <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 relative z-10 items-center">
               {/* Left Content */}
               <div className="lg:col-span-7 flex flex-col gap-6">
                 <button className="self-start px-8 py-3 rounded-lg font-semibold text-sm text-white bg-[#301881] border border-[#8260b9] inner-shadow">

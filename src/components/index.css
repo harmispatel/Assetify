@@ -98,3 +98,28 @@
 .blog-btn{
   background: radial-gradient(123.63% 269.03% at 77.73% 73%, #200F56 21.04%, #9747FF 100%);
 }
+
+.border-animation{
+  padding: 2px;
+  border-radius: 16px;
+  position: relative;
+  background-image: conic-gradient(from var(--border-gradient-angle) at 50% 50%, transparent, #ffa057 14%, #ffe0c2 15%, transparent 17%);
+  background-size: contain;
+  background-color: #4A2881;
+  animation: rotateBG 9s linear infinite;
+}
+
+@keyframes rotateBG {
+  0% {
+    --border-gradient-angle: 0turn;
+}
+100% {
+    --border-gradient-angle: 1turn;
+}
+}
+
+@property --border-gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}

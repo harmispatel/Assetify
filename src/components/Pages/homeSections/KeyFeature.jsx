@@ -58,7 +58,7 @@ const KeyFeature = () => {
           </div>
 
           <div className="container mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 xl:grid-cols-3  gap-5">
               {aiData?.map((phase, index) => (
                 <div key={index}>
                   <div className="rounded-xl lg:p-7 p-4 border border-[#8260B9] h-full bg-[#12032c]">

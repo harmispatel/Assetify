@@ -12,8 +12,8 @@ const blogsData = Array(6).fill({
 
 const Blogs = () => (
   <div className="bg-[#12032c] lg:py-12 py-6 font-montserrat">
-    <div className="container mx-auto lg:px-8 px-4">
-      <div className="border border-[#8260b9] rounded-[22px] lg:p-10 p-4 space-y-5 shadow-[40px_40px_174px_0px_#9747FF24_inset]">
+    <div className="container mx-auto lg:px-6 px-0">
+      <div className="border border-[#8260b9] rounded-[22px] xl:p-10  py-10 px-6 space-y-5 shadow-[40px_40px_174px_0px_#9747FF24_inset]">
         <button className="self-start px-[22px] bg-[#301881] py-[10px] rounded-lg text-[16px] font-semibold border border-[#8260b9] shadow-inset-custom ">
           <span className="common-btn-color">News</span>
         </button>
@@ -24,7 +24,7 @@ const Blogs = () => (
           modules={[Autoplay]}
           breakpoints={{
             0: { slidesPerView: 1, spaceBetween: 20 },
-            768: { slidesPerView: 1, spaceBetween: 40 },
+            768: { slidesPerView: 2, spaceBetween: 40 },
             1199: { slidesPerView: 3, spaceBetween: 20 },
           }}
           spaceBetween={20}

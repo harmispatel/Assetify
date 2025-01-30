@@ -73,32 +73,23 @@ const RoadMap = () => {
     <>
       <div className="bg-[#12032c] lg:py-12 py-6 font-montserrat">
         <div className="container mx-auto lg:px-8">
-          <div className="px-5 space-y-5">
-            <h3 className="text-white font-extrabold lg:text-[46px] text-[28px] lg:leading-[55px]">
+          <div className="px-5 space-y-5  mb-6 xl:mb-0 lg:mb-6 md:mb-6 mt-6 xl:mt-0 lg:mt-6 md:mt-6">
+            <h3 className="text-white font-extrabold lg:text-[46px] text-[28px] lg:leading-[55px] text-center lg:text-left md:text-left xl:text-left">
               Roadmap
             </h3>
           </div>
           <div className="bg-[#12032c]">
             <div className="container mx-auto px-5">
-              <div className="flex justify-center items-center py-5">
+              <div className="xl:flex justify-center items-center py-5 hidden md:hidden">
                 <img src={roadMapLine} alt="" />
               </div>
 
               <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                 breakpoints={{
-                  0: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                  },
-                  768: {
-                    slidesPerView: 1,
-                    spaceBetween: 40,
-                  },
-                  1199: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                  },
+                  0: { slidesPerView: 1, spaceBetween: 20 },
+                  768: { slidesPerView: 2, spaceBetween: 40 },
+                  1199: { slidesPerView: 3, spaceBetween: 20 },
                 }}
                 spaceBetween={20}
                 slidesPerView={3}

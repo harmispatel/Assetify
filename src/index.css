@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  font-family: "Montserrat", serif;
+}
+
 .swiper-slide {
   width: auto;
   height: auto;
