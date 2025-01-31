@@ -160,13 +160,51 @@
   }
 }
 
-.smart_wallet:after{
+.smart_wallet:after {
   content: "";
   position: absolute;
-  background: linear-gradient(360deg, #321958 -23.6%, #12032B 55.14%);
+  background: linear-gradient(360deg, #321958 -23.6%, #12032b 55.14%);
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   opacity: 0.9;
+}
+
+.custom-checkbox-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.custom-checkbox {
+  display: none;
+}
+
+.custom-checkbox-label {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #d8d8d8;
+  border-radius: 4px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-checkbox:checked + .custom-checkbox-label {
+  background-color: #4caf50; /* Green when checked */
+  border-color: #4caf50;
+}
+
+.custom-checkbox:checked + .custom-checkbox-label::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 2px;
 }

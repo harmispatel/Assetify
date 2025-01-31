@@ -46,8 +46,8 @@ const SmartWallet = () => {
 
   return (
     <>
-      <div className="bg-[#12032c] lg:pt-12 pt-6 font-montserrat xl:px-[48px]">
-        <div className="container max-w-full">
+      <div className="bg-[#12032c] lg:pt-12 font-montserrat xl:px-[48px]">
+        <div className="container mx-auto">
           <div className="smart_wallet overflow-hidden relative border-[0.5px] border-[#8260b9] rounded-[22px] bg-[url('/src/assets/outline.png')] bg-cover bg-no-repeat bg-fixed xl:p-[50px] px-[20px] py-[50px]">
             <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 relative z-10 items-center">
               {/* Left Content */}
