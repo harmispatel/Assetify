@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import {
-  Linkedin,
   Twitter,
   MessageCircle,
   Send,
@@ -14,6 +13,16 @@ import {
 } from "lucide-react";
 import { Link } from "react-router";
 import Logo from "../../assets/logo.svg";
+import Linkedin from "../../assets/FooterIcons/Linkedin.png";
+import twitter from "../../assets/FooterIcons/twitter.png";
+import Discord from "../../assets/FooterIcons/Discord.png";
+import Telegram from "../../assets/FooterIcons/Telegram.png";
+
+import whitepaper from "../../assets/FooterIcons/whitepaper.png";
+import security from "../../assets/FooterIcons/security.png";
+import terms from "../../assets/FooterIcons/terms.png";
+import privacy from "../../assets/FooterIcons/privacy.png";
+import token from "../../assets/FooterIcons/token.png";
 
 const languages = [
   { code: "en", name: "English", flag: "https://flagcdn.com/w40/us.png" },
@@ -45,11 +54,11 @@ const Footer = () => {
             <Link to="/" className="logo" href="#">
               <img src={Logo} alt="" className="w-[134px] h-[34px]" />
             </Link>
-            <p className="my-8 text-[16px]">
+            <p className="my-8 text-[16px] font-normal leading-[19.5px] text-[#fff]">
               Investments in digital assets carry risk. Please consult a
               financial advisor before investing.
             </p>
-            <p className="text-[16px] mb-8">
+            <p className="text-[14px] mb-10 mt-2 font-normal leading-[17.7px]">
               Copyright © 2025 Assetify.ai All Rights Reserved
             </p>
 
@@ -57,7 +66,7 @@ const Footer = () => {
               <button
                 ref={dropdownButtonRef}
                 type="button"
-                className="inline-flex items-center justify-between w-35 px-4 py-2.5 text-sm font-medium text-white border border-[#FFFFFF] rounded-lg focus:outline-none"
+                className="inline-flex items-center justify-between w-35 px-4 py-2 text-sm font-medium text-white border border-[#FFFFFF] rounded-lg focus:outline-none"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 <div className="flex items-center">
@@ -115,44 +124,89 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold text-purple-500 mb-4">
+            <h3 className="text-[22px] font-semibold text-[#753DD1] mb-6 leading-[26.82px]">
               Follow Us
             </h3>
-            <ul className="space-y-2">
-              <li className="flex items-center">
-                <Linkedin className="w-4 h-4 mr-2" /> Linkedin
+            <ul className="space-y-4">
+              <li className="flex items-center gap-[8px]">
+                <img
+                  src={Linkedin}
+                  alt="linkedin"
+                  className="w-[18px] h-[18px]"
+                />
+                <span className="font-normal text-[16px] leading-[19px] text-white">
+                  Linkedin
+                </span>
               </li>
-              <li className="flex items-center">
-                <Twitter className="w-4 h-4 mr-2" /> Twitter
+              <li className="flex items-center gap-[8px]">
+                <img
+                  src={twitter}
+                  alt="Twitter"
+                  className="w-[18px] h-[18px]"
+                />
+                <span className="font-normal text-[16px] leading-[19px] text-white">
+                  Twitter
+                </span>
               </li>
-              <li className="flex items-center">
-                <MessageCircle className="w-4 h-4 mr-2" /> Discord
+              <li className="flex items-center gap-[8px]">
+                <img
+                  src={Discord}
+                  alt="Discord"
+                  className="w-[18px] h-[18px]"
+                />
+                <span className="font-normal text-[16px] leading-[19px] text-white">
+                  Discord
+                </span>
               </li>
-              <li className="flex items-center">
-                <Send className="w-4 h-4 mr-2" /> Telegram
+              <li className="flex items-center gap-[8px]">
+                <img
+                  src={Telegram}
+                  alt="Telegram"
+                  className="w-[18px] h-[18px]"
+                />
+                <span className="font-normal text-[16px] leading-[19px] text-white">
+                  Telegram
+                </span>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold text-purple-500 mb-4">
+            <h3 className="text-[22px] font-semibold text-[#753DD1] mb-6 leading-[26.82px]">
               Documentation
             </h3>
             <ul className="space-y-2">
-              <li className="flex items-center">
-                <FileText className="w-4 h-4 mr-2" /> Whitepaper
+              <li className="flex items-center gap-[8px]">
+                <img
+                  src={whitepaper}
+                  alt="Whitepaper"
+                  className="w-[18px] h-[18px]"
+                />
+                Whitepaper
               </li>
-              <li className="flex items-center">
-                <Shield className="w-4 h-4 mr-2" /> Security & Audits
+              <li className="flex items-center gap-[8px]">
+                <img
+                  src={security}
+                  alt="Security"
+                  className="w-[18px] h-[18px]"
+                />{" "}
+                Security & Audits
               </li>
-              <li className="flex items-center">
-                <FileSignature className="w-4 h-4 mr-2" /> Terms And Conditions
+              <li className="flex items-center gap-[8px]">
+                <img src={terms} alt="Terms" className="w-[18px] h-[18px]" />{" "}
+                Terms And Conditions
               </li>
-              <li className="flex items-center">
-                <Lock className="w-4 h-4 mr-2" /> Privacy Policy
+              <li className="flex items-center gap-[8px]">
+                <img
+                  src={privacy}
+                  alt="Privacy"
+                  className="w-[18px] h-[18px]"
+                />{" "}
+                Privacy Policy
               </li>
-              <li className="flex items-center">
-                <Coins className="w-4 h-4 mr-2" /> Token Balance Checker
+              <li className="flex items-center gap-[8px]">
+                <img src={token} alt="Token" className="w-[18px] h-[18px]" />{" "}
+                Token Balance Checker
               </li>
             </ul>
           </div>

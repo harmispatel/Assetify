@@ -1,5 +1,5 @@
 import React from "react";
-import howItWork from "../../../assets/How It Works .gif";
+import howItWork from "../../../assets/how-it-works.gif";
 import mobileHowItWork from "../../../assets/MobileHowIt.png";
 import stepsImg from "../../../assets/Steps.png";
 
@@ -49,16 +49,16 @@ const HowItWork = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0">
+              <div className="flex items-start gap-8">
+                <div className="flex-shrink-0 mt-3">
                   <img src={stepsImg} alt="step-image" className="w-full" />
                 </div>
 
                 <div>
                   {steps.map((step, index) => (
-                    <div className="lg:mb-8" key={index}>
+                    <div className="mb-[30px]" key={index}>
                       <button
-                        className="self-start px-5 py-2 rounded-lg text-[14px] text-sm text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors mb-4"
+                        className="self-start py-[10px] px-[22px] rounded-lg text-[14px] text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors leading-[17.07px] mb-[30px]"
                         style={{
                           background:
                             "linear-gradient(300deg, #200F56, #9747FF)",
@@ -67,10 +67,10 @@ const HowItWork = () => {
                       >
                         {step.step}
                       </button>
-                      <h3 className="font-semibold text-[22px] leading-6">
+                      <h3 className="font-semibold text-[22px] leading-[26.82px] mb-[16px]">
                         {step.title}
                       </h3>
-                      <p className="font-normal text-[16px] leading-[19px] lg:my-6 my-5">
+                      <p className="font-normal text-[16px] leading-[19.5px]">
                         {step.description}
                       </p>
                     </div>

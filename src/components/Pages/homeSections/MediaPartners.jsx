@@ -40,16 +40,16 @@ const mediaPartners = [
 const MediaPartners = () => {
   return (
     <>
-      <div className="bg-[#12032C]">
+      <div className="bg-[#12032C] media-partner-sec">
         <div className="bg-[url('/src/assets/media-partner-dots.png')] bg-no-repeat bg-cover bg-center">
-          <div className="bg-[url('/src/assets/media-partner-bg.png')] bg-no-repeat bg-cover bg-center lg:py-20 py-6 font-montserrat">
+          <div className="bg-[url('/src/assets/media-partner-bg.png')] bg-no-repeat bg-cover bg-center lg:py-10 py-[50px] font-montserrat">
             <div className="container mx-auto lg:px-20 px-4 flex flex-col justify-center items-center">
-              <button className="px-[22px] py-[10px] rounded-lg font-semibold text-sm text-white bg-[#301881] border border-[#8260b9] inner-shadow">
+              <button className="px-[22px] py-[10px] rounded-lg font-semibold text-[14px] text-white bg-[#301881] border leading-[17.07px] border-[#8260b9] inner-shadow">
                 <span className="bg-gradient-to-r from-[#FFFFFF] to-[#E077FF] bg-clip-text text-transparent">
                   Partners
                 </span>
               </button>
-              <h3 className="text-white font-extrabold lg:text-[46px] text-[28px] leading-[55px] text-center lg:my-8 my-4">
+              <h3 className="text-white font-extrabold lg:text-[46px] text-[28px] leading-[55px] text-center lg:mt-[18px] lg:mb-[28px] my-4">
                 Our Media Partners
               </h3>
               <div className="container mx-auto px-4">
@@ -85,7 +85,7 @@ const MediaPartners = () => {
                         (brand, index) => (
                           <SwiperSlide
                             key={`rtl-${index}`}
-                            className="relative items-center"
+                            className="flex items-center justify-center"
                           >
                             <div className="relative group">
                               <img

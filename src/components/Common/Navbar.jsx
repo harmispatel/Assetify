@@ -2,6 +2,7 @@ import { Copy, Menu, X } from "lucide-react";
 import React, { useState } from "react";
 import { Link } from "react-router";
 import Logo from "../../assets/logo.svg";
+import copyIcon from "../../assets/Copy.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
   return (
     <>
       <section className="bg-[#6e45e9] text-white text-center py-3 font-montserrat">
-        <div className="container mx-auto flex flex-wrap justify-center items-center space-x-4">
+        <div className="container mx-auto flex flex-wrap justify-center items-center space-x-[10px]">
           <p className="text-[14px] font-light tracking-[1px]">
             Use Special Key:
           </p>
@@ -27,7 +28,7 @@ const Navbar = () => {
             }}
             className="flex items-center justify-center rounded "
           >
-            <Copy className="w-4 h-4" />
+            <img src={copyIcon} className="w-[16px] h-[16px]" />
           </button>
           <span className="text-[14px] font-normal tracking-[1px]">
             to receive 300% Bonus!
@@ -55,43 +56,43 @@ const Navbar = () => {
             <div className="hidden xl:flex items-center space-x-8">
               <Link
                 to="#"
-                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200"
+                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200 text-[#D8D8D8]"
               >
                 About us
               </Link>
               <Link
                 to="#"
-                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200"
+                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200 text-[#D8D8D8]"
               >
                 Why Us
               </Link>
               <Link
                 to="#"
-                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200"
+                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200 text-[#D8D8D8]"
               >
                 Roadmap
               </Link>
               <Link
                 to="#"
-                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200"
+                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200 text-[#D8D8D8]"
               >
                 Resources
               </Link>
               <Link
                 to="#"
-                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200"
+                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200 text-[#D8D8D8]"
               >
                 Token Allocation
               </Link>
               <Link
                 to="#"
-                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200"
+                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200 text-[#D8D8D8]"
               >
                 Audits
               </Link>
               <Link
                 to="#"
-                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200"
+                className="text-[18px] font-medium leading-[21.94px] hover:text-gray-300 transition duration-200 text-[#D8D8D8]"
               >
                 FAQs
               </Link>
@@ -118,43 +119,43 @@ const Navbar = () => {
             <div className="flex flex-col space-y-4 pt-4 pb-3">
               <Link
                 to="#"
-                className="hover:text-gray-300 font-medium transition duration-200 py-2"
+                className="hover:text-gray-300 font-medium transition duration-200 py-2 text-[#D8D8D8]"
               >
                 About us
               </Link>
               <Link
                 to="#"
-                className="hover:text-gray-300 font-medium transition duration-200 py-2"
+                className="hover:text-gray-300 font-medium transition duration-200 py-2 text-[#D8D8D8]"
               >
                 Why Us
               </Link>
               <Link
                 to="#"
-                className="hover:text-gray-300 font-medium transition duration-200 py-2"
+                className="hover:text-gray-300 font-medium transition duration-200 py-2 text-[#D8D8D8]"
               >
                 Roadmap
               </Link>
               <Link
                 to="#"
-                className="hover:text-gray-300 font-medium transition duration-200 py-2"
+                className="hover:text-gray-300 font-medium transition duration-200 py-2 text-[#D8D8D8]"
               >
                 Resources
               </Link>
               <Link
                 to="#"
-                className="hover:text-gray-300 font-medium transition duration-200 py-2"
+                className="hover:text-gray-300 font-medium transition duration-200 py-2 text-[#D8D8D8]"
               >
                 Token Allocation
               </Link>
               <Link
                 to="#"
-                className="hover:text-gray-300 font-medium transition duration-200 py-2"
+                className="hover:text-gray-300 font-medium transition duration-200 py-2 text-[#D8D8D8]"
               >
                 Audits
               </Link>
               <Link
                 to="#"
-                className="hover:text-gray-300 font-medium transition duration-200 py-2"
+                className="hover:text-gray-300 font-medium transition duration-200 py-2 text-[#D8D8D8]"
               >
                 FAQs
               </Link>

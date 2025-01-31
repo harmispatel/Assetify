@@ -28,7 +28,7 @@ const BuildingSection = () => (
         />
 
         <div className="flex flex-col gap-5">
-          <button className="self-start rounded-[8px] font-semibold text-[16px] leading-[17.07px] bg-[#301881] px-5 py-3 inner-shadow">
+          <button className="self-start rounded-[8px] font-semibold text-[14px] leading-[17.07px] bg-[#301881] py-[10px] px-[22px] border border-[#8260B9] inner-shadow">
             <span className="common-btn-color">About Assetify</span>
           </button>
 
@@ -59,7 +59,7 @@ const BuildingSection = () => (
             and profitable for everyone.
           </p>
 
-          <button className="lg:self-start rounded-xl border-[1.5px]  border-[#8260B9]  font-semibold text-[16px] bg-[#301881] py-[15px] px-[32px] inner-shadow text-white">
+          <button className="lg:self-start rounded-xl border-[1.5px]  border-[#8260B9]  font-semibold text-[18px] bg-[#301881] py-[15px] px-[32px] inner-shadow text-white leading-[21.94px]">
             Join Now
           </button>
         </div>

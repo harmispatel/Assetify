@@ -96,7 +96,7 @@ const RoadMap = () => {
                 onSwiper={(swiper) => (roadMapSec.current = swiper)}
                 loop={true}
                 autoplay={{
-                  delay: 4000,
+                  delay: 400000,
                   disableOnInteraction: false,
                 }}
                 pagination={{
@@ -107,9 +107,11 @@ const RoadMap = () => {
                 {RoadmapData.map((phase, index) => (
                   <SwiperSlide key={index} className="road-map-slider">
                     <div key={index} className="relative h-full">
-                      <div className="rounded-2xl lg:p-5 p-4 border border-[#8260b9] h-full">
-                        <button className="self-start rounded-[8px] text-[14px] leading-[17.07px] bg-[#301881]  px-5 py-3 inner-shadow text-white">
-                          {phase.phase}
+                      <div className="rounded-2xl lg:p-6 p-4 border border-[#8260b9] h-full">
+                        <button className="self-start rounded-[8px] text-[14px] leading-[17.07px] bg-[#301881] border border-[#8260B9] font-semibold  py-[10px] px-[22px] inner-shadow text-white">
+                          <span className="common-btn-color">
+                            {phase.phase}
+                          </span>
                         </button>
                         <h3 className="text-white text-[22px] font-extrabold leading-[25px] my-5">
                           {phase?.title}
@@ -129,36 +131,26 @@ const RoadMap = () => {
               </Swiper>
               <div className="swiper-pagination my-4 lg:hidden md:hidden"></div>
               <div className="flex justify-between items-center mt-6">
-                <button
-                  className="self-start w-full md:w-auto md:px-5 md:py-3 px-[32px] py-[12px] rounded-xl lg:text-[18px] md:text-[18px] text-[16px] leading-[21px] font-medium text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors"
-                  style={{
-                    background: "linear-gradient(300deg, #200F56, #9747FF)",
-                    boxShadow: "6px 6px 24px 0px #9747FFB2 inset",
-                  }}
-                >
+                <button className="self-start w-full md:w-auto px-[32px] py-[15px] rounded-xl lg:text-[18px]  leading-[21.94px] font-semibold text-white border border-[#8260b9] bg-[#301881] blog-btn">
                   Explore the Roadmap
                 </button>
 
                 <div className="lg:flex md:flex lg:gap-4 md:gap-4 hidden">
                   <button
-                    className="p-4 rounded-full bg-[#301881] border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors"
+                    className="w-[56px] h-[56px] rounded-full  border-[1.5px] border-[#8260B9] bg-[#301881] blog-btn flex items-center justify-center"
                     onClick={() => roadMapSec?.current?.slidePrev()}
-                    style={{
-                      background: "linear-gradient(300deg, #200F56, #9747FF)",
-                      boxShadow: "6px 6px 24px 0px #9747FFB2 inset",
-                    }}
                   >
-                    <img src={leftArrow} alt="" className="w-6 h-6" />
+                    <img src={leftArrow} alt="" className="w-[18px] h-[18px]" />
                   </button>
                   <button
-                    className="p-4 rounded-full bg-[#301881] border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors"
+                    className="w-[56px] h-[56px] rounded-full  border border-[#8260b9] bg-[#301881] blog-btn flex items-center justify-center"
                     onClick={() => roadMapSec?.current?.slideNext()}
-                    style={{
-                      background: "linear-gradient(300deg, #200F56, #9747FF)",
-                      boxShadow: "6px 6px 24px 0px #9747FFB2 inset",
-                    }}
                   >
-                    <img src={rightArrow} alt="" className="w-6 h-6" />
+                    <img
+                      src={rightArrow}
+                      alt=""
+                      className="w-[18px] h-[18px]"
+                    />
                   </button>
                 </div>
               </div>

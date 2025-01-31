@@ -38,7 +38,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => (
         onClick={onClick}
         className="w-full text-left py-6 px-4 flex justify-between items-center"
       >
-        <span className="lg:text-[20px] text-[18px] font-semibold text-white">
+        <span className="lg:text-[22px] text-[18px] font-semibold text-white leading-[26.82px]">
           {question}
         </span>
         {isOpen ? (
@@ -52,7 +52,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => (
           isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="px-6 font-normal text-base pb-6 text-white">
+        <div className="px-6 font-normal text-[16px] pb-6 text-white leading-[19.5px] mt-4">
           {answer}
         </div>
       </div>
@@ -67,15 +67,15 @@ const Faqs = () => {
     <div className="bg-[#12032c] lg:py-10 py-6 font-montserrat">
       <div className="container mx-auto lg:px-12 px-6">
         <div className="flex justify-center lg:justify-start">
-          <button className="self-start px-[22px] bg-[#301881] py-[10px] rounded-lg text-[14px] font-semibold border border-[#8260b9] shadow-inset-custom ">
-            <span className="common-btn-color">Faqs</span>
+          <button className="self-start px-[22px] bg-[#301881] py-[10px] rounded-lg text-[14px] font-semibold border border-[#8260b9] leading-[17.07px] shadow-inset-custom ">
+            <span className="common-btn-color">Faq</span>
           </button>
         </div>
         <div className="lg:flex justify-between items-center my-4">
           <h3 className="lg:text-[46px] text-[28px] font-extrabold text-white text-center lg:text-start">
             Frequently Asked Questions
           </h3>
-          <button className="lg:block hidden rounded-xl bg-[#301881] border-[1.5px] border-[#8260b9] px-[26px] py-[12px] text-white font-semibold text-[16px] blog-btn">
+          <button className="lg:block hidden rounded-xl bg-[#301881] border-[1.5px] border-[#8260b9] px-[32px] py-[15px] text-white font-semibold text-[18px] blog-btn leading-[21.94px]">
             Buy Now
           </button>
         </div>

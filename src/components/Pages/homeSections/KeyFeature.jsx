@@ -38,9 +38,9 @@ const aiData = [
 const KeyFeature = () => {
   return (
     <>
-      <div className="bg-custom-image bg-no-repeat bg-cover bg-center lg:py-12 py-16 font-montserrat">
-        <div className="container mx-auto lg:px-20 px-4">
-          <button className="self-center px-[22px] py-[10px] rounded-lg font-semibold flex m-auto lg:ml-0 md:ml-0 text-sm text-white bg-[#301881] border border-[#8260b9] inner-shadow">
+      <div className="bg-custom-image bg-no-repeat bg-cover bg-center lg:py-[100px] py-16 font-montserrat">
+        <div className="container mx-auto lg:px-16 px-4">
+          <button className="self-center px-[22px] py-[10px] rounded-[8px] font-semibold flex m-auto lg:ml-0 md:ml-0 text-[14px] leading-[17.07px] text-white bg-[#301881] border border-[#8260b9] inner-shadow">
             <span className="bg-gradient-to-r from-[#FFFFFF] to-[#E077FF] bg-clip-text text-transparent">
               Our Services
             </span>
@@ -50,10 +50,8 @@ const KeyFeature = () => {
             <h3 className="text-white lg:font-extrabold md:font-extrabold font-bold lg:text-[46px] text-[28px] lg:leading-[55px] md:leading-[40px] leading-[34.13px] text-center">
               Key Features
             </h3>
-            <button className="lg:block md:block hidden self-start px-8 py-3 rounded-lg font-semibold text-sm text-white bg-[#301881] border border-[#8260b9] inner-shadow">
-              <span className="bg-gradient-to-r from-[#FFFFFF] to-[#E077FF] bg-clip-text text-transparent">
-                Buy Now
-              </span>
+            <button className="lg:block md:block hidden self-start py-[15px] px-[32px] rounded-[12px] font-semibold text-[18px] leading-[21.94px] text-white bg-[#301881] border-[1.5px] border-[#8260b9] blog-btn">
+              Buy Now
             </button>
           </div>
 
@@ -61,7 +59,13 @@ const KeyFeature = () => {
             <div className="grid grid-cols-1 xl:grid-cols-3  gap-5">
               {aiData?.map((phase, index) => (
                 <div key={index}>
-                  <div className="rounded-xl lg:p-7 p-4 border border-[#8260B9] h-full bg-[#12032c]">
+                  <div
+                    className={`rounded-xl lg:p-7 p-4 border border-[#8260B9] h-full bg-[#12032c] ${
+                      index === 0
+                        ? "shadow-[40px_40px_174px_0px_#9747FF24_inset]"
+                        : ""
+                    }`}
+                  >
                     <img
                       src={phase?.image}
                       alt="Smart Wallet Demo"
@@ -70,7 +74,7 @@ const KeyFeature = () => {
                     <h3 className="text-white text-[22px] font-semibold leading-[25px] my-7">
                       {phase?.title}
                     </h3>
-                    <div className="space-y-4">
+                    <div className="space-y-[12px]">
                       {phase?.description?.map((item, itemIndex) => (
                         <div key={itemIndex} className="flex gap-3">
                           <img src={rightIcon} alt="" className="w-6 h-6" />

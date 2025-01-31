@@ -25,21 +25,21 @@ const PowerdDefi = () => {
         <div className="container mx-auto lg:px-16 px-4">
           <div className="grid items-center grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="flex flex-col gap-5">
-              <h3 className="lg:text-7xl  text-5xl font-extrabold text-white leading-tight">
-                <span className="text-[#6E45E9]">AI</span>-Powered DeFi for{" "}
+              <h3 className="lg:text-[71px]  text-5xl font-extrabold text-white lg:leading-[81px]  leading-tight">
+                <span className="text-[#6E45E9]">AI</span>-Powered DeFi For{" "}
                 <span className="text-[#6E45E9]">Real-World Assets.</span>
               </h3>
 
-              <p className="text-[18px] text-white lg:font-medium md:font-medium ">
+              <p className="text-[18px] text-white lg:font-medium md:font-medium leading-[21.94px]">
                 Simplifying investments with AI, tokenizing real-world assets
                 for everyone - Powered By Assetify
               </p>
 
               <div className="lg:flex md:flex gap-4 items-center grid">
-                <button className="self-start rounded-[8px] relative font-semibold text-[16px] leading-[17.07px] bg-[#301881]  px-6 py-4 inner-shadow text-white">
+                <button className="self-start rounded-[12px] relative font-semibold text-[18px] leading-[21.94px] bg-[#301881]  border-[1.5px] border-[#8260B9] blog-btn  px-[32px] py-[15px]  text-white">
                   Join the Revolution
                 </button>
-                <button className="lg:self-start justify-center flex gap-3 rounded-[8px] font-semibold text-[16px] leading-[17.07px] border border-[#8260b9]  px-4 py-3 text-white">
+                <button className="lg:self-start justify-center flex gap-3 rounded-[12px] font-semibold text-[18px] leading-[21.94px] border border-[#8260b9] bg-[#13042C]  px-[20px] py-[15px] text-white">
                   Read Whitepaper
                   <img
                     src={copyIcon}
@@ -60,16 +60,13 @@ const PowerdDefi = () => {
               <div className="lg:w-[500px] border-animation">
                 <div className="border border-[#8260b9] bg-[#4A2881] text-white lg:p-6 p-4 rounded-2xl relative backdrop-blur-[45px]">
                   <div>
-                    <h4 className="text-[24px] font-extrabold text-center">
-                      Join the Revolution:
-                    </h4>
-                    <h4 className="text-[24px] font-extrabold text-center">
-                      Buy $AST Now!
+                    <h4 className="text-[24px] font-extrabold text-center max-w-[300px] mx-auto leading-[29.26px]">
+                      Join the Revolution: Buy $AST Now!
                     </h4>
                   </div>
                   <div className="flex justify-between  rounded-[8px] font-semibold text-[14px] leading-[17.07px] mt-3 bg-[#301881]  px-6 py-3 inner-shadow text-white">
-                    <h5>Current Stage: 1st</h5>
-                    <h5>Price: $0.05</h5>
+                    <h5 className="common-btn-color">Current Stage: 1st</h5>
+                    <h5 className="common-btn-color">Price: $0.05</h5>
                   </div>
                   <div className="flex justify-between mt-5">
                     <h5>Total Raised</h5>
@@ -103,7 +100,7 @@ const PowerdDefi = () => {
                             className="flex flex-col px-10 py-3 border border-[#8260B9] cursor-pointer bg-[#13042C] rounded-[12px] transition-all duration-200 hover:bg-[#2A0960] peer-checked:bg-[#2A0960] peer-checked:border-[1.5px] peer-checked:shadow-[inset_0px_0px_20px_2px_#9747ffb2]"
                             htmlFor={item.id}
                           >
-                            <span className="text-[18px] font-semibold uppercase flex items-center justify-center gap-3">
+                            <span className="text-[18px] font-semibold uppercase flex items-center justify-center gap-3 text-white leading-[21.94px]">
                               {item.label}
                               <img
                                 src={item.imageSrc}
@@ -117,12 +114,12 @@ const PowerdDefi = () => {
                     </div>
                   </div>
 
-                  <div className="grid mb-4 relative">
+                  <div className="grid mb-2 relative">
                     <label className="text-[16px] mb-1">Choose amount</label>
                     <div className="relative">
                       <input
                         type="text"
-                        className="border border-[#8260b9] bg-[#13042C] w-full p-3 rounded-xl"
+                        className="border border-[#8260b9] bg-[#13042C] w-full p-3 rounded-xl text-[#FFF] placeholder-white placeholder:text-[15px]"
                         placeholder="00"
                       />
                       <img
@@ -137,7 +134,7 @@ const PowerdDefi = () => {
                     <div className="relative">
                       <input
                         type="text"
-                        className="border border-[#8260b9] bg-[#13042C] w-full p-3 rounded-xl"
+                        className="border border-[#8260b9] bg-[#13042C] w-full p-3 rounded-xl placeholder-white placeholder:text-[15px]"
                         placeholder="0.00"
                       />
                       <img
@@ -148,10 +145,10 @@ const PowerdDefi = () => {
                   </div>
 
                   <div className="">
-                    <button className="w-[100%] rounded-[8px] mb-3 font-semibold text-[16px] leading-[17.07px] bg-[#301881]  px-6 py-4 inner-shadow text-white">
+                    <button className="w-[100%] rounded-[12px] mb-3 font-semibold text-[16px] leading-[17.07px] bg-[#301881]  px-6 py-4 inner-shadow text-white border-[1.5px] border-[#8260B9]">
                       Connect Wallet
                     </button>
-                    <button className="w-[100%] rounded-[8px] font-semibold text-[16px] leading-[17.07px] bg-white text-[#0E0F23] border border-[#8260b9]  px-6 py-4">
+                    <button className="w-[100%] rounded-[12px] font-semibold text-[16px] leading-[17.07px] bg-white text-[#0E0F23] border-[1.5px] border-[#8260b9]  px-6 py-4">
                       Manual Payment
                     </button>
                     {/* <div className="py-[18px] px-[22px] bg-[#753DD1] inline-block font-semibold text-lg leading-[21.94px] rounded-tl-lg rounded-tr-lg w-auto absolute right-0 lg:bottom-[145px] md:bottom-[125px] bottom-[140px]">

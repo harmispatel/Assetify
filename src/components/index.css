@@ -30,6 +30,11 @@
   display: none !important;
 }
 
+.media-partner-sec .swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 @media (max-width: 767px) {
   .swiper-pagination {
     display: flex !important;
@@ -95,31 +100,73 @@
   box-shadow: inset 6px 6px 24px 0px #9747ffb2;
 }
 
-.blog-btn{
-  background: radial-gradient(123.63% 269.03% at 77.73% 73%, #200F56 21.04%, #9747FF 100%);
+.blog-btn {
+  background: radial-gradient(
+    123.63% 269.03% at 77.73% 73%,
+    #200f56 21.04%,
+    #9747ff 100%
+  );
 }
 
-.border-animation{
+.border-animation {
   padding: 2px;
   border-radius: 16px;
   position: relative;
-  background-image: conic-gradient(from var(--border-gradient-angle) at 50% 50%, transparent, #ffa057 14%, #ffe0c2 15%, transparent 17%);
+  background-image: conic-gradient(
+    from var(--border-gradient-angle) at 50% 50%,
+    transparent,
+    #ffa057 14%,
+    #ffe0c2 15%,
+    transparent 17%
+  );
   background-size: contain;
-  background-color: #4A2881;
+  background-color: #4a2881;
   animation: rotateBG 9s linear infinite;
 }
 
 @keyframes rotateBG {
   0% {
     --border-gradient-angle: 0turn;
-}
-100% {
+  }
+  100% {
     --border-gradient-angle: 1turn;
-}
+  }
 }
 
 @property --border-gradient-angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  /* margin-left: 30px; */
+  margin-top: 5px;
+}
+
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+.smart_wallet:after{
+  content: "";
+  position: absolute;
+  background: linear-gradient(360deg, #321958 -23.6%, #12032B 55.14%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
 }
