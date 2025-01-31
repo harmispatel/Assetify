@@ -7,6 +7,8 @@ import other from "../../../assets/othes.png";
 import inputGroup from "../../../assets/inputGroup.png";
 import copyIcon from "../../../assets/image 15.png";
 import solidProof from "../../../assets/solidProof1.png";
+import { X } from "lucide-react";
+import closeIcon from "../../../assets/closeIcon.png";
 
 const radioItems = [
   { id: "radio_1", label: "BNB", imageSrc: bnb1 },
@@ -84,7 +86,17 @@ const PowerdDefi = () => {
                 }`}
               >
                 <div className="lg:w-[500px] border-animation">
-                  <div className="border border-[#8260b9] bg-[#4A2881] text-white lg:p-6 p-4 rounded-2xl relative backdrop-blur-[45px]">
+                  <div className="border border-[#8260b9] bg-[#4A2881]  text-white lg:p-6 p-4 rounded-2xl relative backdrop-blur-[45px]">
+                    {showGrid && (
+                      <div className="flex justify-end">
+                        <img
+                          src={closeIcon}
+                          alt="close icon"
+                          onClick={() => setShowGrid(!showGrid)}
+                          className="w-[20px] h-[20px]"
+                        />
+                      </div>
+                    )}
                     <div>
                       <h4 className="text-[24px] font-extrabold text-center max-w-[300px] mx-auto leading-[29.26px]">
                         Join the Revolution: Buy $AST Now!
