@@ -57,11 +57,12 @@ const PowerdDefi = () => {
 
               <div className="lg:flex md:flex gap-4 items-center grid">
                 <button
-                  className="self-start rounded-[12px] relative font-semibold text-[18px] leading-[21.94px] bg-[#301881]  border-[1.5px] border-[#8260B9] blog-btn  px-[32px] py-[15px]  text-white"
+                  className="self-start rounded-[12px] relative font-semibold text-[18px] leading-[21.94px] bg-[#301881] border-[1.5px] border-[#8260B9] blog-btn px-[32px] py-[15px] text-white"
                   onClick={handleJoinRevolutionClick}
                 >
                   Join the Revolution
                 </button>
+
                 <button className="lg:self-start justify-center flex gap-3 rounded-[12px] font-semibold text-[18px] leading-[21.94px] border border-[#8260b9] bg-[#13042C]  px-[20px] py-[15px] text-white">
                   Read Whitepaper
                   <img
@@ -71,6 +72,7 @@ const PowerdDefi = () => {
                   />
                 </button>
               </div>
+
               <div className="flex justify-center lg:justify-start md:justify-start">
                 <img
                   src={solidProof}
@@ -85,8 +87,16 @@ const PowerdDefi = () => {
                   showGrid ? "open" : ""
                 }`}
               >
-                <div className="lg:w-[500px] border-animation">
-                  <div className="border border-[#8260b9] bg-[#4A2881]  text-white lg:p-6 p-4 rounded-2xl relative backdrop-blur-[45px]">
+                <div
+                  className={`lg:w-[500px] border-animation ${
+                    showGrid ? "bg-transparent" : "#4a2881"
+                  }`}
+                >
+                  <div
+                    className={`border border-[#8260b9] ${
+                      showGrid ? "bg-transparent" : "bg-[#4A2881]"
+                    }  text-white lg:p-6 p-4 rounded-2xl relative backdrop-blur-[45px]`}
+                  >
                     {showGrid && (
                       <div className="flex justify-end">
                         <img
@@ -198,7 +208,7 @@ const PowerdDefi = () => {
                            </span>
                          </div> */}
                     </div>
-                    <div className="csm-checkbox mt-3 text-base font-normal leading-[19px] flex items-start gap-2">
+                    <div className="csm-checkbox mt-5 text-base font-normal leading-[19px] flex items-start gap-2">
                       <input type="checkbox" id="html" />
                       <label for="html">
                         By making a transaction, you consent and agree to our

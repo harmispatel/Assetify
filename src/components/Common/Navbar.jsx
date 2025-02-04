@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-router";
 import Logo from "../../assets/logo.svg";
 import copyIcon from "../../assets/Copy.png";
+import mobileViewIcon from "../../assets/mobile-line-icon.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,7 +50,7 @@ const Navbar = () => {
               className="xl:hidden text-white hover:text-gray-300"
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={24} /> : <img src={mobileViewIcon} alt="mobile-icon" className="h-[12px] w-[16px]"/>}
             </button>
 
             {/* Desktop Menu */}

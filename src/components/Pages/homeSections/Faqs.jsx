@@ -68,7 +68,7 @@ const Faqs = () => {
       <div className="container mx-auto lg:px-12 px-6">
         <div className="flex justify-center lg:justify-start">
           <button className="self-start px-[22px] bg-[#301881] py-[10px] rounded-lg text-[14px] font-semibold border border-[#8260b9] leading-[17.07px] shadow-inset-custom ">
-            <span className="common-btn-color">Faq</span>
+            <span className="common-btn-color">Faqs</span>
           </button>
         </div>
         <div className="lg:flex justify-between items-center my-4">

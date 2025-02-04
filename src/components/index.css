@@ -120,8 +120,19 @@
     transparent 17%
   );
   background-size: contain;
-  background-color: #4a2881;
   animation: rotateBG 9s linear infinite;
+}
+
+@media (max-width: 767px) {
+  .border-animation {
+    background-image: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .border-animation {
+    background-image: none !important;
+  }
 }
 
 @keyframes rotateBG {
@@ -183,6 +194,7 @@
 .csm-checkbox label {
   position: relative;
   cursor: pointer;
+  color: #d8d8d8;
 }
 
 .csm-checkbox label:before {
@@ -214,7 +226,7 @@
   transform: rotate(45deg);
 }
 
- @keyframes slideUp {
+@keyframes slideUp {
   0% {
     transform: translateY(100%); /* Start from the bottom (off-screen) */
   }
@@ -223,8 +235,8 @@
   }
 }
 
-@media (max-width:767px) {
-  .slide-up{
+@media (max-width: 767px) {
+  .slide-up {
     display: none;
   }
   .open {
@@ -238,7 +250,3 @@
     animation: slideUp 1.5s forwards;
   }
 }
-
-
-
-

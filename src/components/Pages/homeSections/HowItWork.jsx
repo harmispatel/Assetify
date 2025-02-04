@@ -32,12 +32,12 @@ const HowItWork = () => {
           <div className="flex flex-wrap">
             <div className="w-full lg:w-1/2 mb-6 lg:mb-0 xl:block md:block hidden">
               <div>
-                <img src={howItWork} alt="currency" className="w-4/5 mx-auto" />
+                <img src={howItWork} alt="currency" className="w-[90%] mx-auto" />
               </div>
             </div>
             <div className="w-full lg:w-1/2 text-white">
               <div className="mb-12 mt-16 xl:mt-0 lg:mt-0 md:mt-0">
-                <h3 className="text-white font-extrabold lg:text-[46px] xl:text-[35px] text-[28px] lg:leading-[55px] text-center lg:text-left md:text-left xl:text-left">
+                <h3 className="text-white font-extrabold lg:text-[46px] xl:text-[46px] text-[28px] lg:leading-[55px] text-center lg:text-left md:text-left xl:text-left">
                   How It Works
                 </h3>
                 <div className="block xl:hidden md:hidden mt-10 xl:mt-0 lg:mt-0 md:mt-0">
