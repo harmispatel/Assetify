@@ -12,7 +12,7 @@ import aiImage2 from "../../../assets/Mask group (1).png";
 import aiImage3 from "../../../assets/Mask group (2).png";
 import aiImage4 from "../../../assets/Mask group (3).png";
 import rightGreenIcon from "../../../assets/rightGreen.svg";
-import mobileGif from "../../../assets/mobile-prev.png";
+import mobileGif from "../../../assets/mobile-final.png";
 
 const SmartWallet = () => {
   const roadMapSec = useRef(null);
@@ -181,7 +181,7 @@ const SmartWallet = () => {
                 <img
                   src={mobileGif}
                   alt="Smart Wallet Demo"
-                  className="w-4/5 mx-auto floating"
+                  className=" mx-auto floating"
                 />
               </div>
               <button className="xl:hidden md:hidden lg:hidden block self-start px-[32px] md:py-[15px] py-[12px] w-full md:w-auto rounded-xl text-[18px] font-semibold text-white leading-[21.94px] border-[1.5px] border-[#8260b9] bg-diamond-gradient">
