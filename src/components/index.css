@@ -125,13 +125,13 @@
 
 @media (max-width: 767px) {
   .border-animation {
-    background-image: none !important;
+    background-image: none;
   }
 }
 
 @media (max-width: 991px) {
   .border-animation {
-    background-image: none !important;
+    background-image: none;
   }
 }
 

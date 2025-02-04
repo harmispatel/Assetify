@@ -52,8 +52,8 @@ const AssetifyToken = () => {
   return (
     <>
       <div className="bg-[#12032c] lg:pb-12 py-6 font-montserrat">
-        <div className="container mx-auto xl:px-4 px-4">
-          <div className="border border-[#8260b9] rounded-[22px] lg:p-[50px] p-4  shadow-[40px_40px_174px_0px_#9747FF24_inset]">
+        <div className="container mx-auto xl:px-4 md:px-4">
+          <div className="border border-[#8260b9] rounded-[22px] lg:p-[50px] py-[50px] px-[20px] shadow-[40px_40px_174px_0px_#9747FF24_inset]">
             <button className="self-start px-[22px] bg-[#301881] py-[10px] rounded-lg text-[14px] font-semibold border border-[#8260b9] shadow-inset-custom mb-[18px]">
               <span className="common-btn-color">Token</span>
             </button>
