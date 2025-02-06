@@ -18,7 +18,7 @@ const features = [
 ];
 
 const BuildingSection = () => (
-  <div className="bg-[#12032c] lg:py-12 py-6 font-montserrat">
+  <div className="bg-[#12032c] lg:py-12 py-6 font-montserrat relative z-[1]">
     <div className="container mx-auto xl:px-8 lg:px-8 px-4">
       <div className="grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-8">
         <img
@@ -28,7 +28,7 @@ const BuildingSection = () => (
         />
 
         <div className="flex flex-col gap-5">
-          <button className="self-start rounded-[8px] font-semibold text-[14px] leading-[17.07px] bg-[#301881] py-[10px] px-[22px] border border-[#8260B9] inner-shadow">
+          <button className="self-start rounded-[8px] font-semibold text-[14px] leading-[17.07px] bg-[#301881] py-[10px] px-[22px] border border-[#8260B9] why-chhose-btn">
             <span className="common-btn-color">About Assetify</span>
           </button>
 
@@ -59,8 +59,9 @@ const BuildingSection = () => (
             and profitable for everyone.
           </p>
 
-          <button className="lg:self-start rounded-xl border-[1.5px]  border-[#8260B9]  font-semibold text-[18px] bg-[#301881] py-[15px] px-[32px] inner-shadow text-white leading-[21.94px]">
-            Join Now
+          <button className="lg:self-start rounded-xl border-[1.5px]  border-[#8260B9]  font-semibold text-[18px] bg-[#301881] py-[15px] px-[32px] inner-shadow text-white leading-[21.94px] relative shadow-[0_0_0_4px_#12032c]">
+            <div>Join Now</div>
+            <div class="fancyoutline absolute -top-[6px] -left-[6px] -right-[6px] -bottom-[6px] rounded-[17px] -z-[1] after:absolute after:top-1/2 after:left-1/2 after:w-[20rem] after:h-[20rem] after:-z-[1]"></div>
           </button>
         </div>
       </div>

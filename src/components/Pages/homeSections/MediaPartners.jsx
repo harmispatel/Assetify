@@ -44,7 +44,7 @@ const MediaPartners = () => {
         <div className="bg-[url('/src/assets/media-partner-dots.png')] bg-no-repeat bg-cover bg-center">
           <div className="bg-[url('/src/assets/media-partner-bg.png')] bg-no-repeat bg-cover bg-center lg:py-10 py-[50px] font-montserrat">
             <div className="container mx-auto lg:px-20 px-4 flex flex-col justify-center items-center">
-              <button className="px-[22px] py-[10px] rounded-lg font-semibold text-[14px] text-white bg-[#301881] border leading-[17.07px] border-[#8260b9] inner-shadow">
+              <button className="px-[22px] py-[10px] rounded-lg font-semibold text-[14px] text-white bg-[#301881] border leading-[17.07px] border-[#8260b9] why-chhose-btn">
                 <span className="bg-gradient-to-r from-[#FFFFFF] to-[#E077FF] bg-clip-text text-transparent">
                   Partners
                 </span>

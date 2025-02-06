@@ -38,9 +38,9 @@ const aiData = [
 const KeyFeature = () => {
   return (
     <>
-      <div className="bg-custom-image bg-no-repeat bg-cover bg-center lg:py-[100px] py-16 font-montserrat">
+      <div className="bg-custom-image bg-no-repeat bg-cover bg-center lg:py-[100px] py-16 font-montserrat overflow-hidden relative z-[1]">
         <div className="container mx-auto lg:px-16 px-4">
-          <button className="self-center px-[22px] py-[10px] rounded-[8px] font-semibold flex m-auto lg:ml-0 md:ml-0 text-[14px] leading-[17.07px] text-white bg-[#301881] border border-[#8260b9] inner-shadow">
+          <button className="self-center px-[22px] py-[10px] rounded-[8px] font-semibold flex m-auto lg:ml-0 md:ml-0 text-[14px] leading-[17.07px] text-white bg-[#301881] border border-[#8260b9] why-chhose-btn">
             <span className="bg-gradient-to-r from-[#FFFFFF] to-[#E077FF] bg-clip-text text-transparent">
               Our Services
             </span>
@@ -50,8 +50,9 @@ const KeyFeature = () => {
             <h3 className="text-white lg:font-extrabold md:font-extrabold font-bold lg:text-[46px] text-[28px] lg:leading-[55px] md:leading-[40px] leading-[34.13px] text-center">
               Key Features
             </h3>
-            <button className="lg:block md:block hidden self-start py-[15px] px-[32px] rounded-[12px] font-semibold text-[18px] leading-[21.94px] text-white bg-[#301881] border-[1.5px] border-[#8260b9] blog-btn">
-              Buy Now
+            <button className="lg:block md:block hidden self-start py-[15px] px-[32px] rounded-[12px] font-semibold text-[18px] leading-[21.94px] text-white bg-[#301881] border-[1.5px] border-[#8260b9] blog-btn relative shadow-[0_0_0_4px_#422c66]">
+              <div>Buy Now</div>
+              <div class="fancyoutline absolute -top-[6px] -left-[6px] -right-[6px] -bottom-[6px] rounded-[16px] -z-[1] after:absolute after:top-1/2 after:left-1/2 after:w-[20rem] after:h-[20rem] after:-z-[1]"></div>
             </button>
           </div>
 

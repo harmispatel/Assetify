@@ -41,7 +41,7 @@ const PowerdDefi = () => {
 
   return (
     <>
-      <div className="bg-[#12032c] lg:py-12 py-6 font-montserrat bg-[url('/src/assets/hero-bg.png')] bg-cover bg-center">
+      <div className="bg-[#12032c] lg:py-12 py-6 font-montserrat bg-[url('/src/assets/hero-bg.png')] bg-cover bg-center relative z-[1]">
         <div className="container mx-auto lg:px-16 px-4">
           <div className="grid items-center grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="flex flex-col gap-5">
@@ -57,10 +57,11 @@ const PowerdDefi = () => {
 
               <div className="lg:flex md:flex gap-4 items-center grid">
                 <button
-                  className="self-start rounded-[12px] relative font-semibold text-[18px] leading-[21.94px] bg-[#301881] border-[1.5px] border-[#8260B9] blog-btn px-[32px] py-[15px] text-white"
+                  class="inline-block rounded-[12px] relative font-semibold text-[18px] leading-[21.94px] bg-[#301881] border-[1.5px] border-[#8260B9] px-[32px] py-[15px] text-white transition-all duration-[75ms] blog-btn shadow-[0_0_0_4px_#200e3d]"
                   onClick={handleJoinRevolutionClick}
                 >
-                  Join the Revolution
+                  <div>Join the Revolution</div>
+                  <div class="fancyoutline absolute -top-[6px] -left-[6px] -right-[6px] -bottom-[6px] rounded-[17px] -z-[1] after:absolute after:top-1/2 after:left-1/2 after:w-[20rem] after:h-[20rem] after:-z-[1]"></div>
                 </button>
 
                 <button className="lg:self-start justify-center flex gap-3 rounded-[12px] font-semibold text-[18px] leading-[21.94px] border border-[#8260b9] bg-[#13042C]  px-[20px] py-[15px] text-white">

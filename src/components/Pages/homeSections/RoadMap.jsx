@@ -108,7 +108,7 @@ const RoadMap = () => {
                   <SwiperSlide key={index} className="road-map-slider">
                     <div key={index} className="relative h-full">
                       <div className="rounded-2xl lg:p-6 p-4 border border-[#8260b9] h-full">
-                        <button className="self-start rounded-[8px] text-[14px] leading-[17.07px] bg-[#301881] border border-[#8260B9] font-semibold  py-[10px] px-[22px] inner-shadow text-white">
+                        <button className="self-start rounded-[8px] text-[14px] leading-[17.07px] bg-[#301881] border border-[#8260B9] font-semibold  py-[10px] px-[22px] why-chhose-btn text-white">
                           <span className="common-btn-color">
                             {phase.phase}
                           </span>

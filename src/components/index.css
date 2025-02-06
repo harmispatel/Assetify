@@ -15,7 +15,12 @@
 }
 
 .inner-shadow {
-  box-shadow: inset 6px 6px 24px 0px #9747ffb2;
+  background: radial-gradient(123.63% 269.03% at 77.73% 73%, #200F56 21.04%, #9747FF 100%)
+}
+
+.why-chhose-btn{
+  box-shadow: 6px 6px 24px 0px #9747FFB2 inset;
+
 }
 
 .road-map-slider {
@@ -237,8 +242,7 @@
 }
 
 @media (max-width: 767px) {
-
-  .csm-checkbox label:before{
+  .csm-checkbox label:before {
     width: 30px !important;
   }
 
@@ -254,5 +258,25 @@
     opacity: 1;
     z-index: 99;
     animation: slideUp 1.5s forwards;
+  }
+}
+
+.fancyoutline {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+}
+
+.fancyoutline::after {
+  content: "";
+  background: conic-gradient(transparent 0%, #879eff 40%, transparent 40.1%);
+  animation: rotateButton 4s linear infinite;
+}
+
+@keyframes rotateButton {
+  0% {
+    transform: translate(-50%, -50%) rotate(0turn);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(1turn);
   }
 }

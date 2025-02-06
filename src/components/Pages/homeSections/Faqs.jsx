@@ -64,7 +64,7 @@ const Faqs = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <div className="bg-[#12032c] lg:py-10 py-6 font-montserrat">
+    <div className="bg-[#12032c] lg:py-10 py-6 font-montserrat relative z-[1] overflow-hidden">
       <div className="container mx-auto lg:px-12 px-6">
         <div className="flex justify-center lg:justify-start">
           <button className="self-start px-[22px] bg-[#301881] py-[10px] rounded-lg text-[14px] font-semibold border border-[#8260b9] leading-[17.07px] shadow-inset-custom ">
@@ -75,8 +75,9 @@ const Faqs = () => {
           <h3 className="lg:text-[46px] text-[28px] font-extrabold text-white text-center lg:text-start">
             Frequently Asked Questions
           </h3>
-          <button className="lg:block hidden rounded-xl bg-[#301881] border-[1.5px] border-[#8260b9] px-[32px] py-[15px] text-white font-semibold text-[18px] blog-btn leading-[21.94px]">
-            Buy Now
+          <button className="lg:block hidden rounded-xl bg-[#301881] border-[1.5px] border-[#8260b9] px-[32px] py-[15px] text-white font-semibold text-[18px] blog-btn leading-[21.94px] relative shadow-[0_0_0_4px_#12032c]">
+            <div>Buy Now</div>
+            <div class="fancyoutline absolute -top-[6px] -left-[6px] -right-[6px] -bottom-[6px] rounded-[17px] -z-[1] after:absolute after:top-1/2 after:left-1/2 after:w-[20rem] after:h-[20rem] after:-z-[1]"></div>
           </button>
         </div>
 
@@ -92,8 +93,9 @@ const Faqs = () => {
           ))}
         </div>
 
-        <button className="lg:hidden block w-full mt-6 rounded-lg bg-[#301881] px-8 py-4 text-white font-semibold text-[16px]">
-          Buy Now
+        <button className="lg:hidden block w-full mt-6 rounded-lg bg-[#301881] px-8 py-4 text-white font-semibold text-[16px] blog-btn relative shadow-[0_0_0_4px_#12032c]">
+          <div>Buy Now</div>
+          <div class="fancyoutline absolute -top-[6px] -left-[6px] -right-[6px] -bottom-[6px] rounded-[14px] -z-[1] after:absolute after:top-1/2 after:left-1/2 after:w-[20rem] after:h-[20rem] after:-z-[1]"></div>
         </button>
       </div>
     </div>

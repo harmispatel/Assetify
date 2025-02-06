@@ -52,7 +52,7 @@ const SmartWallet = () => {
             <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 relative z-10 items-center">
               {/* Left Content */}
               <div className="lg:col-span-7 flex flex-col">
-                <button className="self-start py-[10px] px-[22px] rounded-lg font-semibold text-[14px] text-white bg-[#301881] border border-[#8260b9] inner-shadow leading-[17.07px]">
+                <button className="self-start py-[10px] px-[22px] rounded-lg font-semibold text-[14px] text-white bg-[#301881] border border-[#8260b9]  leading-[17.07px] why-chhose-btn">
                   <span className="bg-gradient-to-r from-[#FFFFFF] to-[#E077FF] bg-clip-text text-transparent">
                     Why Choose Assetify?
                   </span>
@@ -184,8 +184,10 @@ const SmartWallet = () => {
                   className=" mx-auto floating"
                 />
               </div>
-              <button className="xl:hidden md:hidden lg:hidden block self-start px-[32px] md:py-[15px] py-[12px] w-full md:w-auto rounded-xl text-[18px] font-semibold text-white leading-[21.94px] border-[1.5px] border-[#8260b9] bg-diamond-gradient">
-                Buy Now
+
+              <button className="xl:hidden md:hidden lg:hidden block self-start px-[32px] md:py-[15px] py-[12px] w-full md:w-auto rounded-xl text-[18px] font-semibold text-white leading-[21.94px] border-[1.5px] border-[#8260b9] relative inner-shadow shadow-[0_0_0_4px_#261046]">
+                <div>Buy Now</div>
+                <div class="fancyoutline absolute -top-[6px] -left-[6px] -right-[6px] -bottom-[6px] rounded-[17px] -z-[1] after:absolute after:top-1/2 after:left-1/2 after:w-[20rem] after:h-[20rem] after:-z-[1]"></div>
               </button>
             </div>
           </div>

@@ -32,7 +32,11 @@ const HowItWork = () => {
           <div className="flex flex-wrap">
             <div className="w-full lg:w-1/2 mb-6 lg:mb-0 xl:block md:block hidden">
               <div>
-                <img src={howItWork} alt="currency" className="w-[90%] mx-auto" />
+                <img
+                  src={howItWork}
+                  alt="currency"
+                  className="w-[90%] mx-auto"
+                />
               </div>
             </div>
             <div className="w-full lg:w-1/2 text-white">
@@ -57,14 +61,7 @@ const HowItWork = () => {
                 <div>
                   {steps.map((step, index) => (
                     <div className="mb-[30px]" key={index}>
-                      <button
-                        className="self-start py-[10px] px-[22px] rounded-lg text-[14px] text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors leading-[17.07px] mb-[30px]"
-                        style={{
-                          background:
-                            "linear-gradient(300deg, #200F56, #9747FF)",
-                          boxShadow: "6px 6px 24px 0px #9747FFB2 inset",
-                        }}
-                      >
+                        <button className="self-start py-[10px] px-[22px] rounded-lg text-[14px] text-white border border-[#8260b9] hover:bg-[#3a1ca1] transition-colors leading-[17.07px] mb-[30px] why-chhose-btn bg-[#301881]">
                         {step.step}
                       </button>
                       <h3 className="font-semibold text-[22px] leading-[26.82px] mb-[16px]">
