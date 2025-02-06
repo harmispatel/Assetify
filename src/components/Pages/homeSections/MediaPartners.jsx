@@ -40,7 +40,7 @@ const mediaPartners = [
 const MediaPartners = () => {
   return (
     <>
-      <div className="bg-[#12032C] media-partner-sec xl:pt-[60px]">
+      <div className="bg-[#12032C] media-partner-sec xl:pt-[60px] overflow-hidden">
         <div className="bg-[url('/src/assets/media-partner-dots.png')] bg-no-repeat bg-cover bg-center">
           <div className="bg-[url('/src/assets/media-partner-bg.png')] bg-no-repeat bg-cover bg-center lg:py-10 py-[50px] font-montserrat">
             <div className="container mx-auto lg:px-20 px-4 flex flex-col justify-center items-center">

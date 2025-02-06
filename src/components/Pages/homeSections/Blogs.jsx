@@ -11,7 +11,7 @@ const blogsData = Array(6).fill({
 });
 
 const Blogs = () => (
-  <div className="bg-[#12032c] lg:py-12 py-6 font-montserrat">
+  <div className="bg-[#12032c] lg:py-12 py-6 font-montserrat overflow-hidden">
     <div className="container mx-auto lg:px-6 px-0">
       <div className="border border-[#8260b9] rounded-[22px] xl:p-12  py-10 px-6 space-y-4 shadow-[40px_40px_174px_0px_#9747FF24_inset]">
         <button className="self-start px-[22px] bg-[#301881] py-[10px] rounded-lg text-[14px] font-semibold border border-[#8260b9] shadow-inset-custom leading-[17.07px]">

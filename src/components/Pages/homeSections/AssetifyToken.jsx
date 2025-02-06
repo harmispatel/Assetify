@@ -51,7 +51,7 @@ const AssetifyToken = () => {
 
   return (
     <>
-      <div className="bg-[#12032c] lg:pb-12 py-6 font-montserrat relative z-[1]">
+      <div className="bg-[#12032c] lg:pb-12 py-6 font-montserrat relative z-[1] overflow-hidden">
         <div className="container mx-auto xl:px-4 md:px-4">
           <div className="border border-[#8260b9] rounded-[22px] lg:p-[50px] py-[50px] px-[20px] shadow-[40px_40px_174px_0px_#9747FF24_inset]">
             <button className="self-start px-[22px] bg-[#301881] py-[10px] rounded-lg text-[14px] font-semibold border border-[#8260b9] why-chhose-btn mb-[18px] leading-[17px]">
@@ -94,10 +94,12 @@ const AssetifyToken = () => {
 
             <div className="border-t border-[#8260b9] my-[28px]"></div>
 
-            <button className="self-start px-[32px] md:py-[15px] py-[12px] w-full md:w-auto rounded-xl text-[18px] font-semibold text-white leading-[21.94px] border-[1.5px] border-[#8260b9] bg-diamond-gradient relative shadow-[0_0_0_4px_#190738]">
-              <div>Buy Now</div>
-              <div class="fancyoutline absolute -top-[6px] -left-[6px] -right-[6px] -bottom-[6px] rounded-[17px] -z-[1] after:absolute after:top-1/2 after:left-1/2 after:w-[20rem] after:h-[20rem] after:-z-[1]"></div>
-            </button>
+            <div className="px-[4px]">
+              <button className="self-start px-[32px] md:py-[15px] py-[12px] w-full md:w-auto rounded-xl text-[18px] font-semibold text-white leading-[21.94px] border-[1.5px] border-[#8260b9] bg-diamond-gradient relative shadow-[0_0_0_4px_#190738]">
+                <div>Buy Now</div>
+                <div class="fancyoutline absolute -top-[6px] -left-[6px] -right-[6px] -bottom-[6px] rounded-[17px] -z-[1] after:absolute after:top-1/2 after:left-1/2 after:w-[20rem] after:h-[20rem] after:-z-[1]"></div>
+              </button>
+            </div>
           </div>
         </div>
       </div>

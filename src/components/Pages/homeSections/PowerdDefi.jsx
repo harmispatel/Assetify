@@ -44,7 +44,7 @@ const PowerdDefi = () => {
       <div className="bg-[#12032c] lg:py-12 py-6 font-montserrat bg-[url('/src/assets/hero-bg.png')] bg-cover bg-center relative z-[1]">
         <div className="container mx-auto lg:px-16 px-4">
           <div className="grid items-center grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5 overflow-hidden lg:px-[6px] px-[6px]">
               <h3 className="lg:text-[71px]  text-5xl font-extrabold text-white lg:leading-[81px]  leading-tight">
                 <span className="text-[#6E45E9]">AI</span>-Powered DeFi For{" "}
                 <span className="text-[#6E45E9]">Real-World Assets.</span>

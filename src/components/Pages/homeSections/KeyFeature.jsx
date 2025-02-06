@@ -38,7 +38,7 @@ const aiData = [
 const KeyFeature = () => {
   return (
     <>
-      <div className="bg-custom-image bg-no-repeat bg-cover bg-center lg:py-[100px] py-16 font-montserrat overflow-hidden relative z-[1]">
+      <div className="bg-custom-image bg-no-repeat bg-cover bg-center lg:py-[100px] py-16 font-montserrat overflow-hidden relative z-[1] overflow-hidden">
         <div className="container mx-auto lg:px-16 px-4">
           <button className="self-center px-[22px] py-[10px] rounded-[8px] font-semibold flex m-auto lg:ml-0 md:ml-0 text-[14px] leading-[17.07px] text-white bg-[#301881] border border-[#8260b9] why-chhose-btn">
             <span className="bg-gradient-to-r from-[#FFFFFF] to-[#E077FF] bg-clip-text text-transparent">

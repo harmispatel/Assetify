@@ -46,10 +46,10 @@ const SmartWallet = () => {
 
   return (
     <>
-      <div className="bg-[#12032c] lg:pt-12 font-montserrat xl:px-[48px]">
+      <div className="bg-[#12032c] lg:pt-12 font-montserrat xl:px-[48px] overflow-hidden">
         <div className="container mx-auto">
           <div className="smart_wallet overflow-hidden relative border-[0.5px] border-[#8260b9] rounded-[22px] bg-[url('/src/assets/outline.png')] bg-cover bg-no-repeat bg-fixed xl:p-[50px] px-[20px] py-[50px]">
-            <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 relative z-10 items-center">
+            <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 relative z-10 items-center px-[6px]">
               {/* Left Content */}
               <div className="lg:col-span-7 flex flex-col">
                 <button className="self-start py-[10px] px-[22px] rounded-lg font-semibold text-[14px] text-white bg-[#301881] border border-[#8260b9]  leading-[17.07px] why-chhose-btn">

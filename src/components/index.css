@@ -252,7 +252,7 @@
   .open {
     position: absolute;
     display: grid;
-    top: 25px;
+    top: 0;
     left: 0;
     padding: 10px;
     opacity: 1;

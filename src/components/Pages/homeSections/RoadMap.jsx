@@ -71,7 +71,7 @@ const RoadMap = () => {
 
   return (
     <>
-      <div className="bg-[#12032c] lg:py-12 py-6 font-montserrat">
+      <div className="bg-[#12032c] lg:py-12 py-6 font-montserrat overflow-hidden">
         <div className="container mx-auto lg:px-8">
           <div className="px-5 space-y-5  mb-6 xl:mb-0 lg:mb-6 md:mb-6 mt-6 xl:mt-0 lg:mt-6 md:mt-6">
             <h3 className="text-white font-extrabold lg:text-[46px] text-[28px] lg:leading-[55px] text-center lg:text-left md:text-left xl:text-left">

@@ -27,7 +27,7 @@ const steps = [
 const HowItWork = () => {
   return (
     <>
-      <div className="bg-[#12032c] lg:py-12 font-montserrat">
+      <div className="bg-[#12032c] lg:py-12 font-montserrat overflow-hidden">
         <div className="container mx-auto lg:px-8 px-4">
           <div className="flex flex-wrap">
             <div className="w-full lg:w-1/2 mb-6 lg:mb-0 xl:block md:block hidden">

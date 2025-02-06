@@ -18,7 +18,7 @@ const features = [
 ];
 
 const BuildingSection = () => (
-  <div className="bg-[#12032c] lg:py-12 py-6 font-montserrat relative z-[1]">
+  <div className="bg-[#12032c] lg:py-12 py-6 font-montserrat relative z-[1] overflow-hidden">
     <div className="container mx-auto xl:px-8 lg:px-8 px-4">
       <div className="grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-8">
         <img
@@ -27,7 +27,7 @@ const BuildingSection = () => (
           className="w-full rounded-lg"
         />
 
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 px-[6px] xl:px-[0] mb-[10px] xl:mb-[0]">
           <button className="self-start rounded-[8px] font-semibold text-[14px] leading-[17.07px] bg-[#301881] py-[10px] px-[22px] border border-[#8260B9] why-chhose-btn">
             <span className="common-btn-color">About Assetify</span>
           </button>

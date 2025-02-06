@@ -92,11 +92,12 @@ const Faqs = () => {
             />
           ))}
         </div>
-
-        <button className="lg:hidden block w-full mt-6 rounded-lg bg-[#301881] px-8 py-4 text-white font-semibold text-[16px] blog-btn relative shadow-[0_0_0_4px_#12032c]">
-          <div>Buy Now</div>
-          <div class="fancyoutline absolute -top-[6px] -left-[6px] -right-[6px] -bottom-[6px] rounded-[14px] -z-[1] after:absolute after:top-1/2 after:left-1/2 after:w-[20rem] after:h-[20rem] after:-z-[1]"></div>
-        </button>
+        <div className="px-[4px]">
+          <button className="lg:hidden block w-full mt-6 rounded-lg bg-[#301881] px-8 py-4 text-white font-semibold text-[16px] blog-btn relative shadow-[0_0_0_4px_#12032c]">
+            <div>Buy Now</div>
+            <div class="fancyoutline absolute -top-[6px] -left-[6px] -right-[6px] -bottom-[6px] rounded-[14px] -z-[1] after:absolute after:top-1/2 after:left-1/2 after:w-[20rem] after:h-[20rem] after:-z-[1]"></div>
+          </button>
+        </div>
       </div>
     </div>
   );
