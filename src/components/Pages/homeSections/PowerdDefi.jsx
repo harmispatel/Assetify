@@ -74,7 +74,7 @@ const PowerdDefi = () => {
                 </button>
               </div>
 
-              <div className="flex justify-center lg:justify-start md:justify-start">
+              <div className="flex justify-center lg:justify-start md:justify-start mb-[40px]">
                 <img
                   src={solidProof}
                   alt="What We're Building"
